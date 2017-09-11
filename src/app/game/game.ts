@@ -3,6 +3,7 @@ import 'Editor' from '../editor/editor';
 import 'Platform' from '../platform/platform';
 
 export class Game {
+  id: number;
   name: String;
   raite: number;
   addDate: Date;
@@ -12,7 +13,7 @@ export class Game {
   platformList: Platform[];
   quantity: number;
   description: String;
-  image: String;
+  jacket: String;
   releaseDate: Date;
   pegi: number;
 }
