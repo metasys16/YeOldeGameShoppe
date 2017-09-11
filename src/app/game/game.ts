@@ -7,13 +7,10 @@ import { GAMES } from './mock-game';
 export class Game {
   id: number;
   name: String;
-  raite: number;
-  addDate: Date;
-  price: number;
-  editor: String;
-  kindList: Kind[];
+  rate: number;
+  editor: String[];
+  genre: Kind[];
   platformList: Platform[];
-  quantity: number;
   description: String;
   jacket: String;
   releaseDate: string;
