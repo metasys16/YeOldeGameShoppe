@@ -4,7 +4,7 @@ import { Delivry } from './delivry';
 import { OrderLine } from './orderline';
 
 export class Order {
-  reference: String;
+  /*reference: String;
   user: User;
   orderDate: Date;
   totalAmount: number;
@@ -12,5 +12,5 @@ export class Order {
   delivryAddress: Address;
   billingAddress: Address;
   delivry: Delivry;
-  paymentMethod: String;
+  paymentMethod: String;*/
 }

@@ -1,6 +1,6 @@
-import 'Kind' from '../kind/kind';
-import 'Editor' from '../editor/editor';
-import 'Platform' from '../platform/platform';
+import { Kind } from '../kind/kind';
+import { Editor } from '../editor/editor';
+import { Platform } from '../platform/platform';
 
 export class Game {
   name: String;
