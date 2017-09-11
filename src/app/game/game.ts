@@ -3,16 +3,15 @@ import { Editor } from '../editor/editor';
 import { Platform } from '../platform/platform';
 
 export class Game {
+  id: number;
   name: String;
-  raite: number;
-  addDate: Date;
-  price: number;
-  editor: Editor;
-  kindList: Kind[];
+  rate: number;
+  editor: String[];
+  genre: Kind[];
   platformList: Platform[];
-  quantity: number;
   description: String;
-  image: String;
-  releaseDate: Date;
+  jacket: String;
+  releaseDate: string;
   pegi: number;
 }
+
