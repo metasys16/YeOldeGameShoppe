@@ -1,5 +1,5 @@
 import { User } from '../user';
-export const USERLIST: User[] = [
+export const USERS: User[] = [
   {
     id: 1,
     firstName: 'ABRAHAM',
