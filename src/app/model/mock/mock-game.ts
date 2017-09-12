@@ -55,5 +55,4 @@ export const GAMES: Game[]= [
 		releaseYear: '1996',
 		pegi: 3
 	}
->>>>>>> master
 ];
