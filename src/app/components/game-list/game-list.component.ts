@@ -4,7 +4,8 @@ import { GameService } from '../../service/game.service';
 
 @Component({
   selector: 'app-game-list',
-  templateUrl: 'game-list.component.html'
+  templateUrl: 'game-list.component.html',
+  styleUrls: ['game-list.component.css']
 })
 
 

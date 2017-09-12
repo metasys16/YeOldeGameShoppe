@@ -1,7 +1,12 @@
-<ul class="games">
-  <li  *ngFor="let game of games">
+<div class="container">
+<div class="d-flex flex-row scroll-game-list">
+  <div  *ngFor="let game of games" class="myGame flex justify-content-center">
     <img src="{{game.jacket}}" alt=""/>
-    <p>{{game.name}}</p>
-    <p>{{game.rate}}<p>
-  </li>
-</ul>
+    <div class="info flex justify-content-center">
+      <p>{{game.name}}</p>
+      <p>{{game.rate}}<p>
+    </div>
+
+  </div>
+</div>
+</div>
