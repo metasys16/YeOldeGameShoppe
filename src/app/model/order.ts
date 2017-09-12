@@ -1,5 +1,5 @@
-import { Address } from '../user/address';
-import { User } from '../user/user';
+import { Address } from './address';
+import { User } from './user';
 import { Delivry } from './delivry';
 import { OrderLine } from './orderline';
 

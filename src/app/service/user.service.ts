@@ -1,5 +1,5 @@
-import { User } from '../user';
-import { USERLIST } from './user.mock';
+import { User } from '../model/user';
+import { USERLIST } from '../model/mock/mock-user';
 import { Injectable } from '@angular/core';
 
 @Injectable()
