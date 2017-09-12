@@ -1,16 +1,17 @@
 import { Address } from './address';
 import { User } from './user';
-import { Delivry } from './delivry';
+import { Delivery } from './delivery';
 import { OrderLine } from './orderline';
+import { Payment } from './payment';
 
 export class Order {
-  /*reference: String;
+  reference: String;
   user: User;
-  orderDate: Date;
+  creationDate: Date;
   totalAmount: number;
-  orderLineList: OrderLine[];
-  delivryAddress: Address;
-  billingAddress: Address;
-  delivry: Delivry;
-  paymentMethod: String;*/
+  orderLines: OrderLine[];
+  deliveryAddress?: Address;
+  billingAddress?: Address;
+  delivery?: Delivery;
+  paymentMethod?: Payment;
 }
