@@ -1,5 +1,5 @@
 import { User } from '../user';
-export const USERLIST: User[] = [
+export const USERS: User[] = [
   {
     id: 1,
     firstName: 'ABRAHAM',
@@ -21,7 +21,7 @@ export const USERLIST: User[] = [
       city: '',
       country: ''
     },
-    orderList: [
+    orders: [
       {},
       {}
     ],
@@ -52,7 +52,7 @@ export const USERLIST: User[] = [
       city: '',
       country: ''
     },
-    orderList: [
+    orders: [
       {},
       {}
     ],
@@ -83,7 +83,7 @@ export const USERLIST: User[] = [
       city: '',
       country: ''
     },
-    orderList: [
+    orders: [
       {},
       {}
     ],
@@ -114,7 +114,7 @@ export const USERLIST: User[] = [
       city: '',
       country: ''
     },
-    orderList: [
+    orders: [
       {},
       {}
     ],

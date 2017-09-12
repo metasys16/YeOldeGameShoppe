@@ -1,5 +1,5 @@
-import { Kind } from '../kind/kind';
-import { Order } from '../order/order';
+import { Genre } from './genre';
+import { Order } from './order';
 import { Address } from './address';
 
 export class User {
@@ -9,8 +9,8 @@ export class User {
   mail: String;
   delivryAddress: Address;
   billingAddress: Address;
-  orderList: Order[];
+  orders: Order[];
   login: String;
   password: String;
-  favoriteKind: Kind;
+  favoriteKind: Genre;
 }

@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { GameDetailComponent } from './game/game-detail.component'
 import { GameDetailService } from './game/game-detail.service';
 import { AppComponent } from './app.component';
-import { ProfileComponent } from './user/profile/profile.component';
-import { UserService } from './user/profile/user.service';
+import { ProfileComponent } from './components/profile/profile.component';
+import { UserService } from './service/user.service';
 import { HttpModule } from '@angular/http';
 
 @NgModule({
