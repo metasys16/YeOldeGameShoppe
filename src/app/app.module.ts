@@ -7,10 +7,13 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { UserService } from './service/user.service';
 import { HttpModule } from '@angular/http';
 
+import { CartComponent } from './components/cart/cart.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent
+    ProfileComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

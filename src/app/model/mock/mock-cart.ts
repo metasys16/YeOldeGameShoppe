@@ -24,7 +24,30 @@ export const CARTS: Cart[] = [
           userName: '',
           password: ''
         },
-        price: 1
+        price: 120
+      },
+      {
+        game: {
+          id: 2,
+      		name: 'Tetris',
+      		creationDate: new Date(2017,9,12),
+      		editors: [{name: 'Divers'}],
+      		genres: [{name: 'puzzle'}],
+      		platforms: [{name: 'GameBoy'}],
+      		description: 'Tetris est un jeu vidÃ©o de puzzle conÃ§u par AlekseÃ¯ Pajitnov Ã  partir de juin 1984 sur Elektronika 60. Lors de la crÃ©ation du concept, Pajitnov est aidÃ© de Dmitri Pavlovski et Vadim Guerassimov pour le dÃ©veloppement. Le jeu est Ã©ditÃ© par plusieurs sociÃ©tÃ©s au cours du temps, Ã  la suite dune guerre pour lappropriation des droits Ã  la fin des annÃ©es 1980.',
+      		releaseYear: '1984',
+      		pegi: 3
+        },
+        seller: {
+          id: 2,
+          firstName: 'TANCHEREAU',
+          lastName: 'Victor',
+          mail: 'tancheareau.victor@exemple.com',
+          orders: [],
+          userName: '',
+          password: ''
+        },
+        price: 180
       }
     ]
   }

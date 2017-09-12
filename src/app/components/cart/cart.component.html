@@ -1,0 +1,19 @@
+<div>
+  <h3>Mon panier</h3>
+  <ul>
+    <li *ngFor="let copy of copies">
+      <article>
+        <img/>
+        <p>Titre : {{copy.game.name}}</p>
+        <p>Plateforme : {{copy.game.platforms[0].name}}</p>
+        <p>Prix : {{copy.price}}</p>
+        <button>Retirer du panier</button>
+      </article>
+    </li>
+  </ul>
+  <aside>
+    <p>Nombre d'articles : {{copies.length}}</p>
+    <p>TOTAL : {{ totalPrice }}</p>
+    <button>Commander</button>
+  </aside>
+</div>
