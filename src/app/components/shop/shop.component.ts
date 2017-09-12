@@ -2,7 +2,7 @@
 //import { UserService } from './user.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Game } from '../model/game';
+import { Game } from '../../model/game';
 import { GameService } from '../game/game.service';
 
 @Component({
