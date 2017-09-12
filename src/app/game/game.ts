@@ -1,14 +1,14 @@
-import 'Kind' from '../kind/kind';
-import 'Editor' from '../editor/editor';
-import 'Platform' from '../platform/platform';
+import { Genre } from '../genre/genre';
+import { Editor } from '../editor/editor';
+import { Platform } from '../platform/platform';
 
 export class Game {
   name: String;
-  raite: number;
+  rate: number;
   addDate: Date;
   price: number;
   editor: Editor;
-  kindList: Kind[];
+  genreList: Genre[];
   platformList: Platform[];
   quantity: number;
   description: String;
