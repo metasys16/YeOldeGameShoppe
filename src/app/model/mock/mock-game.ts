@@ -25,7 +25,7 @@ export const GAMES: Game[]= [
 		platforms: [{name: 'GameBoy'}],
 		description: 'Tetris est un jeu vidÃ©o de puzzle conÃ§u par AlekseÃ¯ Pajitnov Ã  partir de juin 1984 sur Elektronika 60. Lors de la crÃ©ation du concept, Pajitnov est aidÃ© de Dmitri Pavlovski et Vadim Guerassimov pour le dÃ©veloppement. Le jeu est Ã©ditÃ© par plusieurs sociÃ©tÃ©s au cours du temps, Ã  la suite dune guerre pour lappropriation des droits Ã  la fin des annÃ©es 1980.',
 		releaseYear: '1984',
-		jacket:'../../../assets/images/jackets/Tetris.jpg'
+		jacket:'../../../assets/images/jackets/Tetris.jpg',
 		pegi: 3
 	},
 	{ id: 3,
@@ -36,7 +36,7 @@ export const GAMES: Game[]= [
 		platforms: [{name: 'GameBoy'}],
 		description: 'Donkey Kong est un jeu vidÃ©o de plates-formes/puzzle sorti en 1994 sur Game Boy. Le jeu a Ã©tÃ© dÃ©veloppÃ© par Nintendo EAD et Ã©ditÃ© par Nintendo. Il est compatible avec les amÃ©liorations qu offre le Super Game Boy, accessoire permettant de jouer aux jeux Game Boy sur Super Nintendo. Il a inspirÃ© la sÃ©rie de jeux lancÃ©e par Mario vs. Donkey Kong sur Game Boy Advance.',
 		releaseYear: '1994',
-		jacket:'../../../assets/images/jackets/DonKeyKong.jpg'
+		jacket:'../../../assets/images/jackets/DonKeyKong.jpg',
 		pegi: 3
 	},
 	{ id: 4,
