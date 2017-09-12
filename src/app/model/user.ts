@@ -13,4 +13,5 @@ export class User {
   userName: String;
   password: String;
   favoriteGenre?: Genre;
+  following?: User[];
 }
