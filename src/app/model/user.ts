@@ -7,10 +7,11 @@ export class User {
   firstName: String;
   lastName: String;
   mail: String;
-  delivryAddress: Address;
-  billingAddress: Address;
+  deliveryAddress?: Address;
+  billingAddress?: Address;
   orders: Order[];
-  login: String;
+  userName: String;
   password: String;
-  favoriteKind: Genre;
+  favoriteGenre?: Genre;
+  following?: User[];
 }

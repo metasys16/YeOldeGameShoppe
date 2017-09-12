@@ -7,8 +7,5 @@
 			<h3>{{user.firstName}} {{user.lastName}}</h3>
 			<p>{{user.mail}}</p>
 		</div>
-		<div *ngFor="let followed of user.following">
-			<a routerLink="/user/{{followed.id}}">{{followed.firstName}} {{followed.lastName}}</a>
-		</div>
 	</div>
 </div>

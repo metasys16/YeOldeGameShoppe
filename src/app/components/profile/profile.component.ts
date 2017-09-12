@@ -1,7 +1,8 @@
 import { User } from '../../model/user';
 import { UserService } from '../../service/user.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'app-profile',
@@ -10,14 +11,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
 
-  private user: User;
-  private id: number;
+  user: User;
 
   constructor(private userService: UserService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.id = this.route.snapshot.params['id'];
-    this.user = this.userService.getProfile(this.id);
+    this.route.paramMap.switchMap((params: ParamMap) => this.userService.getUser(+params.get('id'))).subscribe(user => this.user = user);
   }
-
 }

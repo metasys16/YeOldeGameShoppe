@@ -1,8 +1,8 @@
 export class Address {
-  postalCode: String;
-  addressOne: String;
-  addressTwo: String;
-  addressNumber: number;
+  addressNumber?: String;
+  street: String;
+  complement?: String;
   city: String;
+  postalCode: String;
   country: String;
 }
