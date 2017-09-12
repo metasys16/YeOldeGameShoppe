@@ -3,7 +3,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Game } from '../../model/game';
-import { GameService } from '../game/game.service';
+import { Platform } from '../../model/platform';
+import { GameService } from '../../service/game.service';
 
 @Component({
   selector: 'app-shop',
@@ -20,5 +21,4 @@ export class ShopComponent implements OnInit {
   ngOnInit() {
     this.games = this.gameService.getGames();
   }
-
 }

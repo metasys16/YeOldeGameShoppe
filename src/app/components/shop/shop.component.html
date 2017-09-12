@@ -1,3 +1,7 @@
 <div class="container">
-	<h3>{{game.name}} {{game.editor}}</h3>
+	<ul>
+		<li *ngFor="let game of games">
+			<h3>{{game.name}} {{game.editor}}</h3>
+		</li>
+	</ul>
 </div>

@@ -5,9 +5,10 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ShopComponent } from './components/shop/shop.component';
+import { CartComponent } from './components/cart/cart.component';
 
 import { UserService } from './service/user.service';
-import { GameService } from './components/game/game.service';
+import { GameService } from './service/game.service';
 import { HttpModule } from '@angular/http';
 
 @NgModule({
@@ -15,6 +16,7 @@ import { HttpModule } from '@angular/http';
     AppComponent,
     ProfileComponent,
     ShopComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
