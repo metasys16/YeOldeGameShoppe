@@ -18,7 +18,6 @@ export class ShopComponent implements OnInit {
   constructor(private gameService: GameService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-  //  this.id = this.route.snapshot.params['id'];
     this.games = this.gameService.getGames();
   }
 
