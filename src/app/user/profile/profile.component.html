@@ -1,3 +1,11 @@
-<div class="container">
-	<h3>{{user.firstName}} {{user.lastName}}</h3>
+<div class="container text-center">
+	<div class="row">
+		<div class="col-4">
+			<img class="avatar" [src]='"assets/images/profils/profile-unknow.jpg"' alt="Avatar" />
+		</div>
+		<div class="col-8">		
+			<h3>{{user.firstName}} {{user.lastName}}</h3>
+			<p>{{user.mail}}</p>
+		</div>
+	</div>
 </div>
