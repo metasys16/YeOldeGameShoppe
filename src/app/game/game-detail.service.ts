@@ -1,5 +1,5 @@
-import { Game } from './game';
-import { GAMES } from './mock-game';
+import { Game } from '../model/game';
+import { GAMES } from '../model/mock/mock-game';
 import { Injectable } from '@angular/core';
 
 @Injectable()

@@ -1,12 +1,30 @@
-<div>
-	<div>
-		<picture>{{game.picture}}</picture>
-		<p>{{game.rate}}</p>
+<div class="detailGame">
+	<div class="pictureRateGame">
+		<picture class="pictureGame">{{game.picture}}</picture>
+		<div class="rateGame">
+			<picture>{{game.jacket}}</picture>
+			<p class="rate">NOTE: {{game.rate}}</p>
+		</div>
 	</div>
-	<div>
-		<h2>{{game.name}}</h2>
-		<p>{{game.editor}}</p>
-		<p>{{game.platformList}}</p>
-		<p>{{game.description}}</p>		
+
+	<div class="infoGame">
+		<div class="titleGame">
+			<h3 class="intitule1">Titre</h3>
+			<h3>{{game.name}}</h3>
+		</div>
+		<div class="editorGame">
+			<h3 class="intitule">Editeur</h3>
+			<p>{{game.editors}}</p>
+		</div>
+		<div class="platformGame">
+			<h3 class="intitule">Plateforme</h3>
+			<dl *ngFor="let platform of game.platforms">
+				<li class="platform" >{{platform.name}}</li>
+			</dl>
+		</div>
+		<div class="descriptionGame">
+			<h3 class="intitule">Description</h3>
+			<p class="description">{{game.description}}</p>
+		</div>	
 	</div>
 </div>
