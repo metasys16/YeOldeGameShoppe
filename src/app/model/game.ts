@@ -15,4 +15,5 @@ export class Game {
   cover?: String;
   releaseYear: String;
   pegi?: number;
+  jacket?: String;
 }

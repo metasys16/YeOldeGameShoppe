@@ -8,7 +8,27 @@ export const USERS: User[] = [
     mail: 'nathan.abraham@exemple.com',
     orders: [],
     userName: '',
-    password: ''
+    password: '',
+    following: [
+    {
+        id: 1,
+        firstName: 'ABRAHAM',
+        lastName: 'Nathan',
+        mail: 'nathan.abraham@exemple.com',
+        orders: [],
+        userName: '',
+        password: ''
+    },
+    {
+        id: 2,
+        firstName: 'TANCHEREAU',
+        lastName: 'Victor',
+        mail: 'tancheareau.victor@exemple.com',
+        orders: [],
+        userName: '',
+        password: ''
+    },
+    ]
   },
   {
     id: 2,

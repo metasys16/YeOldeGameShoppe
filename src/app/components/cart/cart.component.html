@@ -3,7 +3,7 @@
   <ul>
     <li *ngFor="let copy of copies">
       <article>
-        <img/>
+        <img *ngIf="copy.game.cover" src="{{copy.game.cover}}" alt="jaquette de {{copy.game.name}}"/>
         <p>Titre : {{copy.game.name}}</p>
         <p>Plateforme : {{copy.game.platforms[0].name}}</p>
         <p>Prix : {{copy.price}}</p>
