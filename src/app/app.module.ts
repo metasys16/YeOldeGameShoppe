@@ -25,7 +25,6 @@ import { HttpModule } from '@angular/http';
     GameDetailComponent,
     GameListComponent,
     CartComponent,
-    MyProfileComponent,
   ],
   imports: [
     BrowserModule,
