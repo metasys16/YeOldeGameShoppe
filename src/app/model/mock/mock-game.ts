@@ -27,7 +27,7 @@ export const GAMES: Game[]= [
 		description: 'Tetris est un jeu vidÃ©o de puzzle conÃ§u par AlekseÃ¯ Pajitnov Ã  partir de juin 1984 sur Elektronika 60. Lors de la crÃ©ation du concept, Pajitnov est aidÃ© de Dmitri Pavlovski et Vadim Guerassimov pour le dÃ©veloppement. Le jeu est Ã©ditÃ© par plusieurs sociÃ©tÃ©s au cours du temps, Ã  la suite dune guerre pour lappropriation des droits Ã  la fin des annÃ©es 1980.',
 		releaseYear: '1984',
 		cover:'../../../assets/images/jackets/Tetris.jpg',
-		miniCover:'../../../assets/images/jackets/Tetris-min.jpg',
+		miniCover:'../../../assets/images/jackets/Tetris-min.png',
 		pegi: 3
 	},
 	{ id: 3,
