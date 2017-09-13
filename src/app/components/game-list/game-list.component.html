@@ -1,7 +1,7 @@
 <div class="container">
 <div class="d-flex flex-row scroll-game-list">
   <div  *ngFor="let game of games" class="myGame flex justify-content-center">
-    <img src="{{game.jacket}}" alt=""/>
+  <a href="game/{{ game.id }}"> <img src="{{game.miniCover}}" alt=""/></a>
     <div class="info">
       <p>{{game.name}}</p>
       <p>{{game.rate}}<p>

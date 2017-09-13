@@ -1,0 +1,33 @@
+<div class="card container mx-auto">
+  <h3 class="card-title title">Mon panier</h3>
+  <div class="d-flex flex-row justify-content-around align-items-center flex-nowrap">
+    <div class="card container border-0">
+      <div class="card-block">
+        <ul class="list-group">
+          <li *ngFor="let copy of copies" class="list-reset">
+            <article class="card d-flex flex-row justify-content-around align-items-center d-flex flex-nowrap container">
+              <div class="d-flex flex-column flex-wrap justify-content-around align-items-center border rounded">
+                <img *ngIf="copy.game.miniCover" src="{{copy.game.miniCover}}"
+                  alt="jaquette de {{copy.game.name}}"/>
+                <button type="button" class="btn btn-danger">Retirer du panier</button>
+              </div>
+              <div>
+                <p>Titre : {{copy.game.name}}</p>
+                <p>Plateforme : {{copy.game.platforms[0].name}}</p>
+              </div>
+              <p>Prix : {{copy.price}}</p>
+
+            </article>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="card container align-self-stretch aside border-top-0 border-bottom-0 border-right-0 rounded-0">
+      <aside class="card-block align-middle mx-auto">
+        <p>Nombre d'articles : {{copies.length}}</p>
+        <p>TOTAL : {{ totalPrice }}</p>
+        <button type="button" class="btn btn-primary">Commander</button>
+      </aside>
+    </div>
+  </div>
+</div>
