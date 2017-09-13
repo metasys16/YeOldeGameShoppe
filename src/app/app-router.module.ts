@@ -8,6 +8,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { GameListComponent } from './components/game-list/game-list.component';
 
 import { CartComponent } from './components/cart/cart.component';
+import { OrderComponent } from './components/order/order.component';
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -22,9 +23,10 @@ const routes: Routes = [
   {path: 'gameList', component: GameListComponent},
 
   { path: 'my-profile', component: MyProfileComponent },
+
   { path: 'cart', component: CartComponent },
 
-
+  { path: 'order', component: OrderComponent },
 ];
 
 @NgModule({

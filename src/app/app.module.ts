@@ -13,6 +13,7 @@ import { UserService } from './service/user.service';
 import { GameService } from './service/game.service';
 import { CartService } from './service/cart.service';
 import { HttpModule } from '@angular/http';
+import { OrderComponent } from './components/order/order.component'
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HttpModule } from '@angular/http';
     GameDetailComponent,
     GameListComponent,
     MyProfileComponent,
+    OrderComponent,
   ],
   imports: [
     BrowserModule,
