@@ -1,7 +1,7 @@
-import { Game } from '../model/game';
+import { Game } from '../../model/game';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { GameDetailService } from './game-detail.service';
+import { GameDetailService } from '../../service/game-detail.service';
 
 
 @Component({
@@ -11,7 +11,7 @@ import { GameDetailService } from './game-detail.service';
 })
 
 export class GameDetailComponent implements OnInit {
-	
+
 	private game:Game;
 	private id: number;
 

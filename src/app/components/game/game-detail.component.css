@@ -1,0 +1,101 @@
+@font-face {
+  font-family: Pirou;
+  src: url('/assets/css/fonts/pirou.ttf');
+}
+
+.detail{
+	margin-right: 50px;
+	margin-left: 50px 
+}
+.detailGame{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	align-items: flex-start;
+}
+.pictureRateGame{
+	flex-grow: 1;
+	justify-content: center;
+}
+.infoGame{
+	display: flex;
+	flex-direction: column;
+	flex-grow: 3;
+}
+.titleGame{
+	display: flex;
+	color: #00ba8b;
+	font-size: 30px;
+	font-weight: bold;
+}
+.chemin{
+	color: #00ba8b;
+	font-size: 20px;
+}
+.editorGame{
+	display: flex;
+}
+.platformGame{
+	display: flex;
+	font-size: 
+}
+.descriptionGame{
+	display: flex;
+	align-items: center;
+	align-items: flex-start;
+}
+.platform{	
+	background-color: #6de2c4;
+	list-style-type: none;
+	padding: 3.5px;
+	margin-right: 5px;
+	color: white;
+	display: flex;
+	flex-wrap: wrap;
+}
+.intitule{
+	width: 150px;
+	font-size: 20px;
+	font-weight: bold;
+}
+.intitule1{
+	width: 150px;
+}
+.description{
+	width: 600px;
+	font-size: 14px;
+}
+.rate{
+	font-size: 24px;
+}
+.editor{
+	list-style-type: none;
+	font-size: 20px;
+}
+.intituleAchat{
+	width: 150px;
+	font-size: 20px;
+}
+.btnPanier{
+	background-color: #6de2c4;
+	padding: 3.5px;
+	color: white;
+}
+.btnPrevenir{
+	background-color: #6de2c4;
+	padding: 5px;
+	color: white;
+}
+.infoAchat{
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #6de2c4;
+	padding: 5px;
+}
+.ligneInfoAchat{
+	display: flex;
+	justify-content: space-between;
+}

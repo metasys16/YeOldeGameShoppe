@@ -1,5 +1,5 @@
 
-import { GameDetailComponent } from './game/game-detail.component';
+import { GameDetailComponent } from './components/game/game-detail.component';
 
 
 import { MyProfileComponent } from './components/my-profil/my-profile.component';
