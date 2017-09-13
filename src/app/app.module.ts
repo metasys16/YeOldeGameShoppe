@@ -1,16 +1,19 @@
 import { AppRouterModule } from './app-router.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { GameDetailComponent } from './game/game-detail.component'
+import { GameDetailComponent } from './game/game-detail.component';
 import { GameDetailService } from './game/game-detail.service';
 import {GameListComponent } from './components/game-list/game-list.component';
 import { AppComponent } from './app.component';
 import { CartComponent } from './components/cart/cart.component';
 import { MyProfileComponent } from './components/my-profil/my-profile.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { LoginModule } from './login.module';
 import { UserService } from './service/user.service';
 import { GameService } from './service/game.service';
+import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 @NgModule({
@@ -19,13 +22,15 @@ import { HttpModule } from '@angular/http';
     ProfileComponent,
     GameDetailComponent,
     GameListComponent,
-    MyProfileComponent,
     CartComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
     AppRouterModule,
-    HttpModule
+    HttpModule,
+    LoginModule,
   ],
   providers: [
     UserService,
