@@ -1,20 +1,19 @@
 import { AuthService } from '../../service/auth.service';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
-  template: `
-    <h2>LOGIN</h2>
-    <p>{{message}}</p>
-    <p>
-      <button (click)="login()"  *ngIf="!authService.isLoggedIn">Login</button>
-      <button (click)="logout()" *ngIf="authService.isLoggedIn">Logout</button>
-    </p>`
+  selector: 'app-login',
+  templateUrl: './login.component.html',
 })
 export class LoginComponent {
   message: string;
-
-  constructor(public authService: AuthService, public router: Router) {
+  
+  model: any = {};
+  
+  constructor(public authService: AuthService, public router: Router, private route: ActivatedRoute) {
     this.setMessage();
   }
 
@@ -24,13 +23,12 @@ export class LoginComponent {
 
   login() {
     this.message = 'Trying to log in ...';
-
-    this.authService.login().subscribe(() => {
+    this.authService.login(this.model).subscribe(() => {
       this.setMessage();
       if (this.authService.isLoggedIn) {
         // Get the redirect URL from our auth service
         // If no redirect has been set, use the default
-        let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/';
+        let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/my-profile';
 
         // Redirect the user
         this.router.navigate([redirect]);
