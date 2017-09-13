@@ -9,7 +9,9 @@ import { AppComponent } from './app.component';
 import { CartComponent } from './components/cart/cart.component';
 import { MyProfileComponent } from './components/my-profil/my-profile.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { GameSearchComponent } from './components/game-search/game-search.component';
 import { UserService } from './service/user.service';
+import { GameSearchService } from './service/game-search.service';
 import { GameService } from './service/game.service';
 import { HttpModule } from '@angular/http';
 
@@ -21,6 +23,7 @@ import { HttpModule } from '@angular/http';
     GameDetailComponent,
     GameListComponent,
     MyProfileComponent,
+    GameSearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { HttpModule } from '@angular/http';
   providers: [
     UserService,
     GameDetailService,
-    GameService
+    GameService,
+    GameSearchService,
   ],
   bootstrap: [AppComponent]
 })
