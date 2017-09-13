@@ -9,7 +9,4 @@ export class UserService {
   getUser(id: number): Promise<User> {
     return Promise.resolve(USERS.find(elem => elem.id === id));
   }
-  getMyProfile(): User {
-    return null;
-  }
 }
