@@ -6,6 +6,7 @@ import { GameDetailComponent } from './game/game-detail.component'
 import { GameDetailService } from './game/game-detail.service';
 import {GameListComponent } from './components/game-list/game-list.component';
 import { AppComponent } from './app.component';
+import { CartComponent } from './components/cart/cart.component';
 import { MyProfileComponent } from './components/my-profil/my-profile.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { UserService } from './service/user.service';
@@ -19,6 +20,7 @@ import { HttpModule } from '@angular/http';
     GameDetailComponent,
     GameListComponent,
     MyProfileComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
