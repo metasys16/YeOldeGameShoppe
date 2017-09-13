@@ -9,7 +9,7 @@ export class User {
   mail: String;
   deliveryAddress?: Address;
   billingAddress?: Address;
-  orders: Order[];
+  orders?: Order[];
   userName: String;
   password: String;
   favoriteGenre?: Genre;

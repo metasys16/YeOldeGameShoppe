@@ -1,0 +1,28 @@
+@font-face {
+  font-family: Pirou;
+  src: url('/assets/css/fonts/pirou.ttf');
+}
+.myNav{
+  width: 80%;
+  margin: 0 auto;
+  background-color:#00ba8b;
+
+}
+.myNav li{
+  font-family: Pirou;
+  font-size: 1.2em;
+}
+a{
+  color: white;
+}
+#panier{
+  width:22.5%;
+  margin-left: 2em;
+}
+#logo{
+  width: 20%;
+}
+.gauche{
+  background-color: red;
+  width: 33%;
+}
