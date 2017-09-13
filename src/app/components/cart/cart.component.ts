@@ -1,13 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Cart } from '../../model/cart';
-import { CARTS } from '../../model/mock/mock-cart';
-
 import { Copy } from '../../model/copy';
-import { COPIES } from '../../model/mock/mock-copy';
 
-import { Game } from '../../model/game';
-import { GAMES } from '../../model/mock/mock-game';
+import { CARTS } from '../../model/mock/mock-cart';
 
 @Component({
   selector: 'cart',
@@ -16,11 +12,13 @@ import { GAMES } from '../../model/mock/mock-game';
 })
 
 export class CartComponent implements OnInit{
+  private cart: Cart;
   private copies: Copy[];
-  private carts: Cart[];
-  private games: Game[];
+  totalPrice: number;
 
   ngOnInit(): void {
-        this.games = GAMES;
-    }
+    this.cart = CARTS[0];
+    this.copies = this.cart.copies;
+    this.totalPrice = this.copies.reduce( (a,b) => (a + b.price), 0 );
+  }
 }

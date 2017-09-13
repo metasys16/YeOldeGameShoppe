@@ -6,7 +6,6 @@ import { Payment } from './payment';
 
 export class Order {
   reference: String;
-  user: User;
   creationDate: Date;
   totalAmount: number;
   orderLines: OrderLine[];

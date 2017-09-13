@@ -1,7 +1,7 @@
 import { User } from '../../model/user';
 import { UserService } from '../../service/user.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-my-profile',
@@ -15,7 +15,7 @@ export class MyProfileComponent implements OnInit {
   constructor(private userService: UserService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.user = this.userService.getMyProfile();
+    this.route.paramMap.switchMap((params: ParamMap) => this.userService.getUser(+params.get('id'))).subscribe(user => this.user = user);
   }
 
 }

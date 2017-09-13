@@ -17,6 +17,7 @@ import { HttpModule } from '@angular/http';
   declarations: [
     AppComponent,
     ProfileComponent,
+    CartComponent,
     GameDetailComponent,
     GameListComponent,
     MyProfileComponent,
