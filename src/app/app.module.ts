@@ -11,6 +11,7 @@ import { MyProfileComponent } from './components/my-profil/my-profile.component'
 import { ProfileComponent } from './components/profile/profile.component';
 import { UserService } from './service/user.service';
 import { GameService } from './service/game.service';
+import { CartService } from './service/cart.service';
 import { HttpModule } from '@angular/http';
 
 @NgModule({
@@ -30,8 +31,11 @@ import { HttpModule } from '@angular/http';
   providers: [
     UserService,
     GameDetailService,
-    GameService
+    GameService,
+    CartService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule {
+}
