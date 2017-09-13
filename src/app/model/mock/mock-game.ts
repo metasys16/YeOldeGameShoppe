@@ -18,7 +18,8 @@ export const GAMES: Game[]= [
 		miniCover:'../../../assets/images/jackets/Mario-min.jpg',
 		pegi: 3
 	},
-	{ id: 2,
+	{
+		id: 2,
 		name: 'Tetris',
 		creationDate: new Date(2017,9,12),
 		editors: [{name: 'Divers'}],
@@ -30,7 +31,8 @@ export const GAMES: Game[]= [
 		miniCover:'../../../assets/images/jackets/Tetris-min.png',
 		pegi: 3
 	},
-	{ id: 3,
+	{
+		id: 3,
 		name: 'Donkey Kong',
 		creationDate: new Date(2017,9,12),
 		editors: [{name: 'Nintendo'}],
@@ -42,7 +44,8 @@ export const GAMES: Game[]= [
 		miniCover:'../../../assets/images/jackets/DonKeyKong-min.jpg',
 		pegi: 3
 	},
-	{ id: 4,
+	{
+		id: 4,
 		name: 'Sonic',
 		creationDate: new Date(2017,9,12),
 		editors: [{name: 'Sega'}],
@@ -54,7 +57,8 @@ export const GAMES: Game[]= [
 		miniCover:'../../../assets/images/jackets/Sonic-min.jpg',
 		pegi:3
 	},
-	{ id: 5,
+	{
+		id: 5,
 		name: 'Pokemon Rouge',
 		creationDate: new Date(2017,9,12),
 		editors: [{name: 'Game Freak'}],
