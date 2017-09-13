@@ -13,6 +13,7 @@ export class Game {
   platforms: Platform[];
   description?: String;
   cover?: String;
+  miniCover?: String;
   releaseYear: String;
   pegi?: number;
   jacket?: String;
