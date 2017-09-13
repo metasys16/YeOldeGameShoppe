@@ -2,8 +2,8 @@ import { AppRouterModule } from './app-router.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { GameDetailComponent } from './game/game-detail.component'
-import { GameDetailService } from './game/game-detail.service';
+import { GameDetailComponent } from './components/game/game-detail.component'
+import { GameDetailService } from './service/game-detail.service';
 import {GameListComponent } from './components/game-list/game-list.component';
 import { AppComponent } from './app.component';
 import { CartComponent } from './components/cart/cart.component';
