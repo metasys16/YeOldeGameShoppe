@@ -2,6 +2,7 @@ import { Genre } from './genre';
 import { Editor } from './editor';
 import { Platform } from './platform';
 import { Rate } from './rate';
+import { Copy } from './copy';
 
 export class Game {
   id: number;
@@ -16,4 +17,5 @@ export class Game {
   miniCover?: String;
   releaseYear: String;
   pegi?: number;
+  copies?: Copy[];
 }

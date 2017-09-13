@@ -16,7 +16,44 @@ export const GAMES: Game[]= [
 		releaseYear: '1987',
 		cover:'../../../assets/images/jackets/Mario.jpg',
 		miniCover:'../../../assets/images/jackets/Mario-min.jpg',
-		pegi: 3
+		pegi: 3,
+		copies: [
+			{ 
+                seller:{
+                    id: 1,
+                    firstName: 'ABRAHAM',
+                    lastName: 'Nathan',
+                    mail: 'nathan.abraham@exemple.com',
+                    userName: '',
+                    password: '',
+    			}, 
+                price:120
+            },
+			{
+                seller:{
+                    id: 2,
+                    firstName: 'TANCHEREAU',
+                    lastName: 'Victor',
+                    mail: 'tancheareau.victor@exemple.com',
+                    orders: [],
+                    userName: '',
+                    password: ''
+                }, 
+                price:110
+            },
+			{
+                seller:{
+                    id: 3,
+                    firstName: 'PUSSAUT',
+                    lastName: 'Pierre',
+                    mail: 'pussaut.pierre@exemple.com',
+                    orders: [],
+                    userName: '',
+                    password: ''
+                }, 
+                price:130
+            }
+		]
 	},
 	{
 		id: 2,
