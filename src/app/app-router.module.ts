@@ -1,3 +1,7 @@
+
+import { GameDetailComponent } from './game/game-detail.component';
+
+
 import { MyProfileComponent } from './components/my-profil/my-profile.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
@@ -12,10 +16,14 @@ const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: 'user/:id', component: ProfileComponent },
 
+  { path: 'game/:id', component: GameDetailComponent },
+
+
   {path: 'gameList', component: GameListComponent},
 
   { path: 'my-profile', component: MyProfileComponent },
   { path: 'cart', component: CartComponent },
+
 
 ];
 

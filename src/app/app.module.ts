@@ -1,8 +1,12 @@
 import { AppRouterModule } from './app-router.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+import { GameDetailComponent } from './game/game-detail.component'
+import { GameDetailService } from './game/game-detail.service';
 import {GameListComponent } from './components/game-list/game-list.component';
 import { AppComponent } from './app.component';
+import { CartComponent } from './components/cart/cart.component';
 import { MyProfileComponent } from './components/my-profil/my-profile.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { UserService } from './service/user.service';
@@ -13,17 +17,19 @@ import { HttpModule } from '@angular/http';
   declarations: [
     AppComponent,
     ProfileComponent,
-
+    GameDetailComponent,
     GameListComponent,
     MyProfileComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
     AppRouterModule,
-    HttpModule,
+    HttpModule
   ],
   providers: [
     UserService,
+    GameDetailService,
     GameService
   ],
   bootstrap: [AppComponent]
