@@ -9,7 +9,7 @@ import { CartService } from '../../service/cart.service';
 
 @Component({
   selector: 'app-cart',
-  templateUrl: './cart.component.html',
+  templateUrl: './cart-bis.component.html',
   styleUrls: ['./cart.component.css']
 })
 

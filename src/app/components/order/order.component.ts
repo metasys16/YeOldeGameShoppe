@@ -41,12 +41,12 @@ export class OrderComponent implements OnInit{
     this.deliveryService.getDeliveries().then( deliveries => this.deliveries = deliveries );
 
     if (this.user.billingAddress == undefined){
-      this.order.billingAddress = { street: "", city: "", postalCode: "", country: "",}
+      this.order.billingAddress = { addressNumber:"", street: "", complement:"Complément d'adresse", city: "Ville", postalCode: "Code Postal", country: "Pays"};
     }else{
       this.order.billingAddress = this.user.billingAddress;
     }
     if (this.user.deliveryAddress == undefined){
-      this.order.deliveryAddress = { street: "", city: "", postalCode: "", country: "",}
+      this.order.deliveryAddress = { addressNumber:"", street: "", complement:"Complément d'adresse", city: "Ville", postalCode: "Code Postal", country: "Pays"};
     }else{
       this.order.deliveryAddress = this.user.deliveryAddress;
     }
