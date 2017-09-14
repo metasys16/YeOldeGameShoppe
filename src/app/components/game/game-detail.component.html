@@ -27,7 +27,7 @@
 			<div class="descriptionGame">
 				<h3 class="intitule">Description</h3>
 				<p class="description">{{game.description}}</p>
-			</div>	
+			</div>
 		</div>
 		<ul *ngIf="hasCopies;else warn">
 			<li *ngFor="let copy of game.copies" class="infoAchat">
@@ -36,7 +36,7 @@
 					<p>{{copy.seller.firstName}}</p>
 					<p>{{copy.seller.lastName}}</p>
 				</div>
-				
+
 				<div class="ligneInfoAchat">
 					<h3 class="intituleAchat">Prix </h3>
 					<p>{{copy.price}} €</p>
@@ -47,6 +47,6 @@
 		<ng-template #warn>
 			<button class="btnPrevenir" >Me prévenir</button>
 		</ng-template>
-		
+
 	</div>
 </div>
