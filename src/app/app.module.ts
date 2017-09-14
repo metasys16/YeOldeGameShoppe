@@ -14,6 +14,7 @@ import { UserService } from './service/user.service';
 import { GameService } from './service/game.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartService } from './service/cart.service';
+import { DeliveryService } from './service/delivery.service';
 import { HttpModule } from '@angular/http';
 import { GameDetailService } from './service/game-detail.service';
 import { OrderComponent } from './components/order/order.component'
@@ -44,7 +45,8 @@ import { OrderComponent } from './components/order/order.component'
     UserService,
     GameDetailService,
     GameService,
-    CartService
+    CartService,
+    DeliveryService
   ],
   bootstrap: [AppComponent]
 })
