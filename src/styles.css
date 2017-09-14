@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+.game_vignette{
+  margin-bottom: 2rem;
+}
+.game_vignette_title{
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.game_vignette_date{
+  margin-top: -0.5rem;
+  background-color: #8630cc;
+  color: white;
+  font-weight: bolder;
+  padding: 0.5rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
