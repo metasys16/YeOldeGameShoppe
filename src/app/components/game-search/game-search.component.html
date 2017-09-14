@@ -4,9 +4,9 @@
 
       <a *ngFor="let game of games | async" routerLink="/game/{{game.id}}"
            (click)="gotoDetail(game)" class="search-result" >
-          <div>
-          <img src="{{ game.miniCover }}" alt="game.name">
-          {{game.name}}
+          <div class="search-details">
+            <img src="{{ game.miniCover }}" alt="game.name">
+            {{game.name}}
         </div>
         </a>
 
