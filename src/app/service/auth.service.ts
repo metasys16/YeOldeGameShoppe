@@ -19,10 +19,10 @@ export class AuthService {
   login(model: any): Observable<boolean> {
     this.userService.getUserByLogin(model).then(elem => this.activeUser = elem);
     if (typeof this.activeUser !== 'undefined') {
-      return Observable.of(true).delay(1000).do(val => this.isLoggedIn = true);
+      return Observable.of(true).do(val => this.isLoggedIn = true);
     }
     else{
-      return Observable.of(true).delay(1000).do(val => this.isLoggedIn = false);
+      return Observable.of(true).do(val => this.isLoggedIn = false);
     }
   }
 
