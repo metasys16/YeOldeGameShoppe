@@ -7,9 +7,6 @@ import { CARTS } from '../../model/mock/mock-cart';
 
 import { CartService } from '../../service/cart.service';
 
-
-import 'rxjs/add/operator/switchMap';
-
 @Component({
   selector: 'cart',
   templateUrl: './cart.component.html',
