@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { Game } from '../../model/game';
-import { GameService } from '../../service/game.service';
 
 @Component({
   selector: 'app-game-list',
@@ -8,14 +7,7 @@ import { GameService } from '../../service/game.service';
   styleUrls: ['game-list.component.css']
 })
 
+export class GameListComponent {
+  @Input() games: Game;
 
-export class GameListComponent implements OnInit{
-  games: Game[] = [];
-
-  constructor(private gameService: GameService){
-
-  }
-  ngOnInit(){
-    this.games = this.gameService.getGames();
-  }
 }
