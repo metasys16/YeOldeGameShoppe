@@ -5,7 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GameDetailComponent } from './components/game/game-detail.component';
 import { GameDetailService } from './service/game-detail.service';
 import { GameListComponent } from './components/game-list/game-list.component';
-import { GameDetailComponent } from './components/game/game-detail.component';
 import { AppComponent } from './app.component';
 import { CartComponent } from './components/cart/cart.component';
 //import { MyProfileComponent } from './components/my-profil/my-profile.component';
@@ -19,7 +18,6 @@ import { GameService } from './service/game.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartService } from './service/cart.service';
 import { HttpModule } from '@angular/http';
-import { GameDetailService } from './service/game-detail.service';
 
 @NgModule({
   declarations: [
