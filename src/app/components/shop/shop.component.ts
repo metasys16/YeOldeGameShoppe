@@ -7,6 +7,8 @@ import { Platform } from '../../model/platform';
 import { GameService, Criteria } from '../../service/game.service';
 import { Genre } from '../../model/genre';
 import { Editor } from '../../model/editor';
+import { FirebaseListObservable } from 'angularfire2/database';
+
 
 @Component({
   selector: 'app-shop',
@@ -14,14 +16,14 @@ import { Editor } from '../../model/editor';
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent implements OnInit {
-  private games: Game[];
+  private games: FirebaseListObservable<any>;
   private filterCriteria: Criteria = {genres: [], platforms: [], editors: []};
 
   constructor(private gameService: GameService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     console.log("initialisation du shoppe");
-    this.gameService.getGames().then(games => {console.log("nan mais allo quoi");this.games = games;console.log("vla des jeux, ",this.games)}).catch(x => console.log("suuce"));
+    this.games = this.gameService.getGames();
   }
 
   filter(criteria: string, value: any, criteriaType: string): void {

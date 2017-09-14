@@ -15,19 +15,18 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class GameService {
   
-  games: Observable<Game[]>;
+  games: FirebaseListObservable<any>;
   
-  constructor(private dataBase: AngularFireDatabase) {}
+  constructor(private dataBase: AngularFireDatabase) {
+    this.games = this.dataBase.list('/games');
+  }
   
   getGame(id: number): Game {
     return GAMES.find(elem => elem.id == id);
   }
   
-  getGames(criteria?: Criteria): Promise<Game[]> {
-    return this.dataBase.list('/games')
-      .map(games => this.games = games)
-      .first()
-      .toPromise();
+  getGames(criteria?: Criteria): FirebaseListObservable<any> {
+    return this.games;
   }
 
   getLatestGames(): Game[] {
