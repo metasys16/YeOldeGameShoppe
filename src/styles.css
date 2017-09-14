@@ -6,18 +6,22 @@ body{
   font-family: Pirou;
   src: url('/assets/css/fonts/pirou.ttf');
 }
-.myNav{
-  width: 80%;
+#myNav{
+  position:relative;
+  width: 60%;
   margin: 0 auto;
   background-color:#00ba8b;
-  margin-top: 1em;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
 }
-.myNav li{
+#myNav ul{
+  margin-left: 2rem;
+}
+#myNav li{
   font-family: Pirou;
   font-size: 1.2em;
 }
-.myNav a{
+#myNav a{
   color: white;
 }
 #panier{
@@ -29,13 +33,12 @@ body{
   width: 33%;
 }
 .logo{
-  width: 50%;
-  display: flex;
-  justify-content: center;
+  position:absolute;
+  left: 0;
+  right: 0;
+  width: 8vw;
 }
-.myNav ul{
-  margin-left: 5em;
-}
+
 .game_vignette{
   margin-bottom: 2rem;
   -webkit-border-radius: 20px;
