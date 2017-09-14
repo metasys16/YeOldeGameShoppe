@@ -9,7 +9,7 @@ export class UserService {
   getUser(id: number): Promise<User> {
     return Promise.resolve(USERS.find(elem => elem.id === id));
   }
-  getMyProfile(): User {
-    return null;
+  getUserByLogin(model: any): Promise<User> {
+    return Promise.resolve(USERS.find(elem => elem.userName === model.username && elem.password === model.password));
   }
 }

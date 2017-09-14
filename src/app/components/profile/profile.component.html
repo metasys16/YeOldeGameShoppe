@@ -1,14 +1,43 @@
 <div class="container text-center">
-	<div class="row">
-		<div class="col-4">
-			<img class="avatar" [src]='"assets/images/profils/profile-unknow.jpg"' alt="Avatar" />
+	<div class="d-flex flex-column">
+		<div class="p-2">
+			<div class="row">
+				<div class="col-4">
+					<img class="avatar" [src]='"assets/images/profils/profile-unknow.jpg"' alt="Avatar" />
+				</div>
+				<div class="col-8">		
+					<h3>{{user.firstName}} {{user.lastName}}</h3>
+					<p>{{user.mail}}</p>
+				</div>
+			</div>
 		</div>
-		<div class="col-8">		
-			<h3>{{user.firstName}} {{user.lastName}}</h3>
-			<p>{{user.mail}}</p>
-		</div>
-		<div *ngFor="let followed of user.following">
-			<a routerLink="/user/{{followed.id}}">{{followed.firstName}} {{followed.lastName}}</a>
+		<div class="p-2">
+			<div class="row">
+				<div class="col-6">
+					<h3>Liste des utilisateurs suivis</h3>
+					<div class="d-flex flex-row">
+						<div *ngFor="let followed of user.following" class="card" style="width: 20rem;" class="p-2">
+							  <div class="card-body">
+								    <h4 class="card-title">{{followed.firstName}} {{followed.lastName}}</h4>
+								    <a routerLink="/user/{{followed.id}}" class="btn btn-primary">Voir profil</a>
+							  </div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<h3>Liste des jeux achetés</h3>
+					<div class="d-flex flex-row">
+						<div *ngFor="let order of user.orders">
+							 <div *ngFor="let orderline of order.orderLines" class="card" style="width: 20rem;" class="p-2">
+							 	<div class="card-body">
+							    	<h4 class="card-title">{{orderline.game.name}}</h4>
+							    	<a routerLink="/game/{{orderline.game.id}}" class="btn btn-primary">Voir jeu</a>
+						  		</div>
+							 </div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

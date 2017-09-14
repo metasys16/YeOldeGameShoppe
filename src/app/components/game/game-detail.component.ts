@@ -1,7 +1,7 @@
-import { Game } from '../model/game';
+import { Game } from '../../model/game';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { GameDetailService } from './game-detail.service';
+import { GameDetailService } from '../../service/game-detail.service';
 
 
 @Component({
@@ -11,14 +11,27 @@ import { GameDetailService } from './game-detail.service';
 })
 
 export class GameDetailComponent implements OnInit {
-	
+
 	private game:Game;
 	private id: number;
+	private hasCopies: boolean;
 
 	constructor(private gameDetailService: GameDetailService, private route: ActivatedRoute) {}
 
 	ngOnInit() {
 		this.id = this.route.snapshot.params['id'];
 		this.game = this.gameDetailService.getGame(this.id);
+		this.hasCopies = this.game.copies !== undefined 
+					  && this.game.copies !== null
+					  && this.game.copies.length > 0;
 	}
+
+	/*addcart(): void {
+		while (Game.id !== []){
+
+		}
+		else{
+
+		}
+	}*/
 }

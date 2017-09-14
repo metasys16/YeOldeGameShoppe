@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Cart } from '../../model/cart';
+import { Copy } from '../../model/copy';
+
 import { CARTS } from '../../model/mock/mock-cart';
 
-import { Copy } from '../../model/copy';
-import { COPIES } from '../../model/mock/mock-copy';
+import { CartService } from '../../service/cart.service';
 
-import { Game } from '../../model/game';
-import { GAMES } from '../../model/mock/mock-game';
+
+import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'cart',
@@ -16,11 +17,31 @@ import { GAMES } from '../../model/mock/mock-game';
 })
 
 export class CartComponent implements OnInit{
-  private copies: Copy[];
-  private carts: Cart[];
-  private games: Game[];
+  private cart: Cart;
+  totalPrice: number;
+
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
-        this.games = GAMES;
-    }
+    this.cartService.getCart().then(
+      cart => {
+        this.cart = cart;
+        this.calculTotalAmount();
+      }
+    );
+  }
+
+  removeCopy(copy: Copy): void {
+    this.cart.copies.splice(this.cart.copies.indexOf(copy),1);
+    this.calculTotalAmount();
+  }
+
+  emptCart(): void {
+    this.cart.copies = [];
+    this.calculTotalAmount();
+  }
+
+  calculTotalAmount(): void {
+    this.totalPrice = this.cart.copies.reduce( (a,b) => (a + b.price), 0 );
+  }
 }

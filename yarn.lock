@@ -327,6 +327,10 @@ angular-ide@^0.9.31:
     winston "2.3.1"
     ws "1.1.1"
 
+angular@^1.2.0:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/angular/-/angular-1.6.6.tgz#fd5a3cfb437ce382d854ee01120797978527cb64"
+
 angularfire2@^4.0.0-rc.2:
   version "4.0.0-rc0"
   resolved "https://registry.yarnpkg.com/angularfire2/-/angularfire2-4.0.0-rc0.tgz#071bda9a51774b6d9e7ad8e8fd4486dbd3b8032b"
@@ -4067,6 +4071,12 @@ ncname@1.0.x:
 negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
+
+ng-idle@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/ng-idle/-/ng-idle-1.3.2.tgz#73a4dcc0a6c8360310d1396df376be6bd0b0a867"
+  dependencies:
+    angular "^1.2.0"
 
 no-case@^2.2.0:
   version "2.3.1"
