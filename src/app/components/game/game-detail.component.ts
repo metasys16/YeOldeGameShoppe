@@ -26,12 +26,5 @@ export class GameDetailComponent implements OnInit {
 					  && this.game.copies.length > 0;
 	}
 
-	/*addcart(): void {
-		while (Game.id !== []){
-
-		}
-		else{
-
-		}
-	}*/
+	
 }
