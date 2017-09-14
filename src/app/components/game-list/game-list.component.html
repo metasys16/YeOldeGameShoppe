@@ -1,11 +1,13 @@
 <div class="container">
   <div class="row">
     <div *ngFor="let game of games | async" class="col-12 col-sm-6 col-md-3">
-      <div class="game_vignette">
-        <h4 class="game_vignette_title">{{game.name}}</h4>
-        <img src="{{game.cover}}" alt="" class="img-fluid"/>
-        <h4 class="game_vignette_date">{{game.releaseYear}}</h4>
-      <div>
+      <a class="link" routerLink="/game/{{game.id}}" routerLinkActive="active">
+        <div class="game_vignette">
+          <h4 class="game_vignette_title">{{game.name}}</h4>
+          <img src="{{game.cover}}" alt="" class="img-fluid"/>
+          <h4 class="game_vignette_date">{{game.releaseYear}}</h4>
+        </div>
+      </a>
     </div>
   </div>
 </div>

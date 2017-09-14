@@ -7,5 +7,7 @@
   position: absolute;
   z-index: 100;
   top: 6rem;
-
+}
+.search-details{
+  color: black;
 }
