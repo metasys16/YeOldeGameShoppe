@@ -26,6 +26,7 @@ export const GAMES: Game[] = [
                     mail: 'nathan.abraham@exemple.com',
                     userName: '',
                     password: '',
+                    avatar: '../../assets/images/profils/profile-unknow.jpg',
     			}, 
                 price:120
             },
@@ -53,7 +54,32 @@ export const GAMES: Game[] = [
                 }, 
                 price:130
             }
-		]
+		],
+		commentary: [
+			{
+				editor:{
+					id: 1,
+                    firstName: 'ABRAHAM',
+                    lastName: 'Nathan',
+                    mail: 'nathan.abraham@exemple.com',
+                    userName: '',
+                    password: '',
+                    avatar: '../../../assets/images/profils/profile-unknow.jpg',
+				},
+				comment: "Ce jeu est super bien"
+			},
+			{
+				editor:{
+					id: 3,
+                    firstName: 'PUSSAUT',
+                    lastName: 'Pierre',
+                    mail: 'pussaut.pierre@exemple.com',
+                    userName: '',
+                    password: ''
+				},
+				comment: "Licorne"
+			}
+		]	
 	},
 	{
 		id: 2,

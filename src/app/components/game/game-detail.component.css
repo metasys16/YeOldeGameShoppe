@@ -6,6 +6,7 @@
 .detail{
 	width: 80%;
   	margin: 0 auto;
+  	margin-top: 0.5rem;
 }
 .detailGame{
 	display: flex;
@@ -25,12 +26,12 @@
 .titleGame{
 	display: flex;
 	color: #00ba8b;
-	font-size: 30px;
+	font-size: 1.5rem;
 	font-weight: bold;
 }
 .chemin{
 	color: #00ba8b;
-	font-size: 20px;
+	font-size: 1rem;
 }
 .editorGame{
 	display: flex;
@@ -48,28 +49,28 @@
 	background-color: #6de2c4;
 	list-style-type: none;
 	padding: 3.5px;
-	margin-right: 5px;
+	margin-right: 0.25rem;
 	color: white;
 	display: flex;
 	flex-wrap: wrap;
 }
 .intitule{
-	width: 150px;
-	font-size: 20px;
+	width: 7.5rem;
+	font-size: 1rem;
 	font-weight: bold;
 }
 .intitule1{
-	width: 150px;
+	width: 7.5rem;
 }
 .description{
 	max-width: 600px;
-	font-size: 14px;
+	font-size: 0.7rem;
 }
 .rate{
-	font-size: 24px;
+	font-size: 1.2rem;
 }
 .editor{
-	font-size: 20px;
+	font-size: 1rem;
 }
 ul{
 	list-style-type: none;
@@ -77,29 +78,75 @@ ul{
 	padding: 0;
 }
 .intituleAchat{
-	width: 100px;
-	font-size: 20px;
+	width: 5rem;
+	font-size: 1rem;
 }
 .btnPanier{
 	background-color: #6de2c4;
-	padding: 3.5px;
+	padding: 0.7rem;
 	color: white;
 }
 .btnPrevenir{
 	background-color: #6de2c4;
-	padding: 5px;
+	padding: 0.25rem;
 	color: white;
 }
 .infoAchat{
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
-	border-width: 2px;
+	border-width: 0.1rem;
 	border-style: solid;
 	border-color: #6de2c4;
-	padding: 5px;
+	padding: 0.25rem;
 }
 .ligneInfoAchat{
 	display: flex;
 	justify-content: space-between;
+}
+.comment{
+	display: flex;
+	flex-direction: column;
+}
+.commentTitle{
+	color:#00ba8b;
+	font-family: Pirou;
+	border-bottom-style: solid;
+	border-bottom-color: #00ba8b;
+}
+.commentView{
+	display: flex;
+}
+.existCommentary{
+	display: flex;
+	flex-grow: 2;
+}
+.commentList{
+	width: 100%;
+}
+.commentLineList{
+	margin-top: 0.5rem;
+	margin-right: 0.5rem;
+	background-color: blue;
+	display: flex;
+	flex-direction: row;
+}
+.commentUser{
+	width: 5.5rem;
+}
+.commentUserAvatar{
+	width: 5.5rem;
+	height: 5.5rem;
+}
+.commentNameUser{
+	margin: 0rem;
+}
+.createComment{
+	background-color: red;
+	margin-top: 0.5rem;
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	text-align: right;
+	padding: 0.1rem;
 }

@@ -3,6 +3,7 @@ import { Editor } from './editor';
 import { Platform } from './platform';
 import { Rate } from './rate';
 import { Copy } from './copy';
+import { Comment } from './comment';
 
 export class Game {
   id: number;
@@ -18,4 +19,5 @@ export class Game {
   releaseYear: String;
   pegi?: number;
   copies?: Copy[];
+  commentary?: Comment[];
 }
