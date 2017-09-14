@@ -47,8 +47,9 @@ export const USERS: User[] = [
         ]
       }
     ],
-    userName: '',
-    password: '',
+    
+    userName: 'toto',
+    password: '123456',
     following: [
     {
         id: 1,

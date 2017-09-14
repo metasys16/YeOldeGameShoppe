@@ -28,11 +28,13 @@ export class GameSearchComponent implements OnInit {
 
   // Push a search term into the observable stream.
   search(term: string): void {
+    term = term.toLowerCase();
     this.searchTerms.next(term);
+    //console.log(term);
   }
   ngOnInit(): void {
     this.games = this.searchTerms
-      .debounceTime(200)
+    //.debounceTime(200)
       .distinctUntilChanged()
       .switchMap(term => term
         ? this.gameSearchService.search(term)

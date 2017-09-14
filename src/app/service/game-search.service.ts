@@ -13,6 +13,7 @@ export class GameSearchService {
   constructor( private gameService: GameService, private route: ActivatedRoute) {}
 
   search(term: string): Observable<Game[]> {
-    return Observable.of(GAMES.filter(x => x.name === term));
+
+    return Observable.of(GAMES.filter(x => x.name.toLowerCase() === term));
   }
 }

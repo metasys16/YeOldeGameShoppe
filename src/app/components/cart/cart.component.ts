@@ -5,6 +5,11 @@ import { Copy } from '../../model/copy';
 
 import { CARTS } from '../../model/mock/mock-cart';
 
+import { CartService } from '../../service/cart.service';
+
+
+import 'rxjs/add/operator/switchMap';
+
 @Component({
   selector: 'cart',
   templateUrl: './cart.component.html',
@@ -13,12 +18,30 @@ import { CARTS } from '../../model/mock/mock-cart';
 
 export class CartComponent implements OnInit{
   private cart: Cart;
-  private copies: Copy[];
   totalPrice: number;
 
+  constructor(private cartService: CartService) { }
+
   ngOnInit(): void {
-    this.cart = CARTS[0];
-    this.copies = this.cart.copies;
-    this.totalPrice = this.copies.reduce( (a,b) => (a + b.price), 0 );
+    this.cartService.getCart().then(
+      cart => {
+        this.cart = cart;
+        this.calculTotalAmount();
+      }
+    );
+  }
+
+  removeCopy(copy: Copy): void {
+    this.cart.copies.splice(this.cart.copies.indexOf(copy),1);
+    this.calculTotalAmount();
+  }
+
+  emptCart(): void {
+    this.cart.copies = [];
+    this.calculTotalAmount();
+  }
+
+  calculTotalAmount(): void {
+    this.totalPrice = this.cart.copies.reduce( (a,b) => (a + b.price), 0 );
   }
 }

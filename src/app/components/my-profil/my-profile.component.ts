@@ -1,4 +1,5 @@
 import { User } from '../../model/user';
+import { AuthService } from '../../service/auth.service';
 import { UserService } from '../../service/user.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
@@ -12,10 +13,10 @@ export class MyProfileComponent implements OnInit {
 
   private user: User;
 
-  constructor(private userService: UserService, private route: ActivatedRoute) { }
+  constructor(private authService: AuthService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.paramMap.switchMap((params: ParamMap) => this.userService.getUser(+params.get('id'))).subscribe(user => this.user = user);
+    this.user = this.authService.activeUser;
   }
 
 }
