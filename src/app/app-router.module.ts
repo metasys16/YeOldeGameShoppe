@@ -22,7 +22,6 @@ const routes: Routes = [
   { path: 'shop', component: ShopComponent },
   { path: 'game/:id', component: GameDetailComponent },
   { path: 'gameList', component: GameListComponent},
-  { path: 'my-profile', component: MyProfileComponent },
   { path: 'cart', component: CartComponent },
   { path: 'order', component: OrderComponent },
   { path: 'cart', component: CartComponent },
