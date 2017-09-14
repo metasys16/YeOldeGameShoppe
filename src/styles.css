@@ -20,12 +20,13 @@ body{
 #myNav li{
   font-family: Pirou;
   font-size: 1.2em;
+  font-weight: bold;
 }
 #myNav a{
   color: white;
 }
 #panier{
-  width:22.5%;
+  height: 40px;
   margin-left: 2em;
 }
 .gauche{
@@ -48,7 +49,9 @@ body{
   -moz-box-shadow: rgba(0,0,0,0.8) 0 0 10px;
   box-shadow: rgba(0,0,0,0.8) 0 0 10px;
 }
-
+.game_vignette:hover{
+  animation: bounce 0.2s infinite alternate;
+}
 .game_vignette_title{
   text-align: center;
   border-top-left-radius: 1rem;
@@ -69,4 +72,15 @@ body{
   padding: 1rem;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+}
+.link:hover{
+  text-decoration: none;
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-5px);
+  }
 }

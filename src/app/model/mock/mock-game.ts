@@ -114,7 +114,7 @@ export const GAMES: Game[] = [
 		creationDate: new Date(2017, 5, 12),
 		editors: [{name: 'Game Freak'}],
 		genres: [{name: 'aventure'}],
-		platforms: [{name: 'Game Boy'}],
+		platforms: [{name: 'GameBoy'}],
 		cover: '../../../assets/images/jackets/PokemonRouge.jpg',
 		miniCover: '../../../assets/images/jackets/PokemonRouge-min.jpg',
 		description: 'Le joueur contrÃ´le le personnage principal via une vue aÃ©rienne et le dirige dans l ensemble de la rÃ©gion fictive de Kanto, inspirÃ©e de la rÃ©gion de KantÅ� sur l Ã®le de HonshÅ«, au Japon. Son but est de capturer, d entraÃ®ner et de faire combattre des crÃ©atures fictives appelÃ©es Â« PokÃ©mon Â» afin d obtenir le titre de Â« MaÃ®tre PokÃ©mon Â». L objectif ultime est de complÃ©ter le PokÃ©dex par l obtention des 150 PokÃ©mon disponibles . Nintendo a par la suite annoncÃ© l existence d un 151e PokÃ©mon secret, Mew. Les versions rouge et bleue sont quasiment identiques : la seule diffÃ©rence rÃ©side dans la prÃ©sence ou l absence de certains PokÃ©mon, de sorte qu il est nÃ©cessaire pour un joueur cherchant Ã  tous les obtenir de rÃ©aliser des Ã©changes avec l autre version du jeu via un cÃ¢ble link, qui permet Ã©galement d organiser des combats entre joueurs.',
