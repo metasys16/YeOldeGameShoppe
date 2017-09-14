@@ -40,7 +40,7 @@
 					<h3 class="intituleAchat">Prix </h3>
 					<p>{{copy.price}} €</p>
 				</div>
-				<button class="btnPanier" >Ajouter au panier</button>
+				<button class="btnPrevenir" >Ajouter au panier</button>
 			</li>
 		</ul>
 		<ng-template #warn>
@@ -52,25 +52,27 @@
 			<h3>Commentaires</h3>
 		</div>
 		<div class="commentView">
-			<div class="existCommentary">
-				<ul *ngIf="hasCommentary;else nothing" class="commentList">
-					<li *ngFor="let comment of game.commentary" class="commentLineList">
-						<div class="commentUser">
-							<img src="{{comment.editor.avatar}}" alt ="" class="commentUserAvatar" />
-							<div>
-								<p class="commentNameUser">{{comment.editor.firstName}}</p>
-								<p class="commentNameUser">{{comment.editor.lastName}}</p>
-							</div>
+			<ul *ngIf="hasCommentary;else nothing" class="commentList">
+				<li *ngFor="let comment of game.commentary" class="commentLineList">
+					<div class="commentUser">
+						<img src="{{comment.editor.avatar}}" alt ="" class="commentUserAvatar" />
+						<div>
+							<p class="commentNameUser">{{comment.editor.firstName}}</p>
+							<p class="commentNameUser">{{comment.editor.lastName}}</p>
 						</div>
-						<p class="commentary">{{comment.comment}}</p>	
-					</li>
-				</ul>	
-			</div>
-			<ng-template #nothing></ng-template>
+					</div>
+					<p class="commentary">{{comment.comment}}</p>	
+				</li>
+			</ul>	
+			<ng-template #nothing>
+				<div class="commentList">
+					<p class="noComment">Noob ou pro-Gamer? Donnez votre avis sur ce jeu.</p>
+				</div>
+			</ng-template>
 			<div class="createComment">
 				<p class="rate">NOTE: </p>
-				<input type="text" name="addComment">
-				<button class="validComment" >Valider</button>
+				<input type="text" name="addComment" class="writeComment">
+				<button class="validComment" (click)="addComment(commentary)">Valider</button>
 			</div>
 		</div>
 	</div>

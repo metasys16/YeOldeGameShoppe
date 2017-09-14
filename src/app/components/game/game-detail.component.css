@@ -81,11 +81,7 @@ ul{
 	width: 5rem;
 	font-size: 1rem;
 }
-.btnPanier{
-	background-color: #6de2c4;
-	padding: 0.7rem;
-	color: white;
-}
+
 .btnPrevenir{
 	background-color: #6de2c4;
 	padding: 0.25rem;
@@ -117,19 +113,16 @@ ul{
 .commentView{
 	display: flex;
 }
-.existCommentary{
-	display: flex;
-	flex-grow: 2;
-}
+
 .commentList{
-	width: 100%;
+	flex-grow: 2;
 }
 .commentLineList{
 	margin-top: 0.5rem;
 	margin-right: 0.5rem;
-	background-color: blue;
 	display: flex;
 	flex-direction: row;
+	align-items: flex-end;
 }
 .commentUser{
 	width: 5.5rem;
@@ -142,11 +135,27 @@ ul{
 	margin: 0rem;
 }
 .createComment{
-	background-color: red;
 	margin-top: 0.5rem;
 	display: flex;
 	flex-grow: 1;
 	flex-direction: column;
-	text-align: right;
 	padding: 0.1rem;
+	justify-content: flex-end;
+}
+.writeComment{
+	height: 5rem;
+	margin: 0.25rem;
+}
+.noComment{
+	color:#00ba8b;
+	font-family: Pirou;
+	font-size: 1.25rem;
+	text-align-last: center;
+
+}
+.validComment{
+	background-color: #6de2c4;
+	padding: 0.25rem;
+	color: white;
+	max-width: 15rem;
 }

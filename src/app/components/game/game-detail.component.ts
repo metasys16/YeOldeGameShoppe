@@ -30,5 +30,9 @@ export class GameDetailComponent implements OnInit {
 						  && this.game.commentary.length > 0;
 	}
 
+	addComment() {
+
+	}
+
 	
 }

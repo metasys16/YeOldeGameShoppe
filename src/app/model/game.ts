@@ -21,7 +21,7 @@ export class Game {
   copies?: Copy[];
   commentary?: Comment[];
 
-  public getRate(): number {
+  public getRate?(): number {
     if (!this.rates || this.rates.length === 0) {
       return 0;
     }
