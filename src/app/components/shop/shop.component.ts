@@ -1,5 +1,5 @@
-//import { User } from '../user';
-//import { UserService } from './user.service';
+// import { User } from '../user';
+// import { UserService } from './user.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Game } from '../../model/game';
@@ -20,17 +20,16 @@ export class ShopComponent implements OnInit {
   constructor(private gameService: GameService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.games = this.gameService.getGames();
-    console.log(this.games);
+    console.log("initialisation du shoppe");
+    this.gameService.getGames().then(games => {console.log("nan mais allo quoi");this.games = games;console.log("vla des jeux, ",this.games)}).catch(x => console.log("suuce"));
   }
 
   filter(criteria: string, value: any, criteriaType: string): void {
-    if (criteriaType == "Genre"){
+    if (criteriaType === 'Genre') {
       if (value) {
         let genre: Genre = { name: criteria };
         this.filterCriteria.genres.push(genre);
-      }
-      else {
+      } else {
         let index = this.filterCriteria.genres.findIndex(a => a.name === criteria);
         if (-1 !== index) {
           this.filterCriteria.genres.splice(index, 1);
@@ -38,11 +37,11 @@ export class ShopComponent implements OnInit {
       }
     }
 
-    if (criteriaType == "Editor"){
+    if (criteriaType === 'Editor'){
       if (value) {
         let editor: Editor = { name: criteria };
         this.filterCriteria.editors.push(editor);
-        console.log("coucou");
+        console.log('coucou');
       }
       else {
         let index = this.filterCriteria.editors.findIndex(a => a.name === criteria);
@@ -52,7 +51,7 @@ export class ShopComponent implements OnInit {
       }
     }
 
-    if (criteriaType == "Platform"){
+    if (criteriaType == 'Platform'){
       if (value) {
         let platform: Platform = { name: criteria };
         this.filterCriteria.platforms.push(platform);
@@ -64,8 +63,8 @@ export class ShopComponent implements OnInit {
         }
       }
     }
-
-    this.games = this.gameService.getGames(this.filterCriteria);
+//
+//    this.games = this.gameService.getGames(this.filterCriteria);
     console.log(this.filterCriteria);
   }
 

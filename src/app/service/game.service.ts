@@ -5,32 +5,28 @@ import { Genre } from '../model/genre';
 import { Platform } from '../model/platform';
 import { Editor } from '../model/editor';
 
+import { Observable } from 'rxjs/Observable';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import * as firebase from 'firebase/app';
+import 'rxjs/add/operator/toPromise';
+
 @Injectable()
 export class GameService {
-  constructor() { }
+  
+  games: Observable<Game[]>;
+  
+  constructor(private dataBase: AngularFireDatabase) { }
+  
   getGame(id: number): Game {
     return GAMES.find(elem => elem.id == id);
   }
-  getGames(criteria?: Criteria): Game[] {
-    let games = GAMES;
-    if (criteria) {
-      if (criteria.genres.length) {
-        criteria.genres.forEach(
-          c_g => games = games.filter(j => j.genres.find(c_j => c_j.name === c_g.name))
-        )
-      }
-      if (criteria.platforms.length) {
-        criteria.platforms.forEach(
-          c_p => games = games.filter(j => j.platforms.find(c_j => c_j.name === c_p.name))
-        )
-      }
-      if (criteria.editors.length) {
-        criteria.editors.forEach(
-          c_p => games = games.filter(j => j.editors.find(c_j => c_j.name === c_p.name))
-        )
-      }
-    }
-    return games;
+  
+  getGames(criteria?: Criteria): Promise<Game[]> {
+    console.log("getting games");
+    this.games = this.dataBase.list('/games');
+    console.log("got game");
+    console.log(this.games);
+    return this.games.toPromise();
   }
 
   getLatestGames(): Game[] {
