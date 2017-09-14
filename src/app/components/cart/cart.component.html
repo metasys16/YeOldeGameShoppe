@@ -2,7 +2,7 @@
   <h3 class="card-title title">Mon panier</h3>
   <div *ngIf="cart" class="d-flex flex-row justify-content-around align-items-center flex-nowrap">
     <div class="card container border-0">
-      <div class="card-block">
+      <div class="card-block" *ngIf="cart">
         <ul class="list-group">
           <li *ngFor="let copy of cart.copies" class="list-reset">
             <article class="card d-flex flex-row justify-content-around align-items-center d-flex flex-nowrap container">
