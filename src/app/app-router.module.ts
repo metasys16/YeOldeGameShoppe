@@ -14,13 +14,15 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ShopComponent } from './components/shop/shop.component';
 
+import { HomeComponent } from './components/home/home.component';
+
+
 const routes: Routes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: '', component: HomeComponent },
   { path: 'user/:id', component: ProfileComponent },
   { path: 'shop', component: ShopComponent },
   { path: 'game/:id', component: GameDetailComponent },
   { path: 'gameList', component: GameListComponent},
-  { path: 'my-profile', component: MyProfileComponent },
   { path: 'cart', component: CartComponent },
 ];
 

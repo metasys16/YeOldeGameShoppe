@@ -7,16 +7,13 @@ import { CARTS } from '../../model/mock/mock-cart';
 
 import { CartService } from '../../service/cart.service';
 
-
-import 'rxjs/add/operator/switchMap';
-
 @Component({
-  selector: 'cart',
+  selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
 
-export class CartComponent implements OnInit{
+export class CartComponent implements OnInit {
   private cart: Cart;
   totalPrice: number;
 
@@ -32,7 +29,7 @@ export class CartComponent implements OnInit{
   }
 
   removeCopy(copy: Copy): void {
-    this.cart.copies.splice(this.cart.copies.indexOf(copy),1);
+    this.cart.copies.splice(this.cart.copies.indexOf(copy), 1);
     this.calculTotalAmount();
   }
 
@@ -42,6 +39,6 @@ export class CartComponent implements OnInit{
   }
 
   calculTotalAmount(): void {
-    this.totalPrice = this.cart.copies.reduce( (a,b) => (a + b.price), 0 );
+    this.totalPrice = this.cart.copies.reduce( (a, b) => (a + b.price), 0 );
   }
 }
