@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
-    <div *ngFor="let game of games" class="col-3 game_vignette">
-      <div class="row">
-        <div class="col-12 text-center"><h3 class="game_vignette_title">{{game.name}}</h3></div>
-        <div class="col-12"><img src="{{game.cover}}" alt="" class="img-fluid"/></div>
-        <div class="col-12 text-right"><h4 class="game_vignette_date">{{game.releaseYear}}</h4></div>
-      </div>
+    <div *ngFor="let game of games" class="col-12 col-sm-6 col-md-3">
+      <div class="game_vignette">
+        <h4 class="game_vignette_title">{{game.name}}</h4>
+        <img src="{{game.cover}}" alt="" class="img-fluid"/>
+        <h4 class="game_vignette_date">{{game.releaseYear}}</h4>
+      <div>
     </div>
   </div>
 </div>
