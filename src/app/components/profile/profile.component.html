@@ -15,7 +15,7 @@
 			<div class="row">
 				<div class="col-6">
 					<h3>Liste des utilisateurs suivis</h3>
-					<div class="d-flex flex-row">
+					<div class="d-flex flex-row" *ngIf="user">
 						<div *ngFor="let followed of user.following" class="card" style="width: 20rem;" class="p-2">
 							  <div class="card-body">
 								    <h4 class="card-title">{{followed.firstName}} {{followed.lastName}}</h4>

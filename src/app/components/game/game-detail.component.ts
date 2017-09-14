@@ -5,7 +5,7 @@ import { GameDetailService } from '../../service/game-detail.service';
 
 
 @Component({
-	selector: 'game-detail',
+	selector: 'app-game-detail',
 	templateUrl: './game-detail.component.html',
 	styleUrls: ['./game-detail.component.css']
 })
