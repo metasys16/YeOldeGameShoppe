@@ -1,17 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
-.game_vignette{
+body{
+  background-color: #333;
+}
+@font-face {
+  font-family: Pirou;
+  src: url('/assets/css/fonts/pirou.ttf');
+}
+.myNav{
+  width: 80%;
+  margin: 0 auto;
+  background-color:#00ba8b;
+  margin-top: 1em;
   margin-bottom: 2rem;
 }
+.myNav li{
+  font-family: Pirou;
+  font-size: 1.2em;
+}
+.myNav a{
+  color: white;
+}
+#panier{
+  width:22.5%;
+  margin-left: 2em;
+}
+.gauche{
+  background-color: red;
+  width: 33%;
+}
+.logo{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.myNav ul{
+  margin-left: 5em;
+}
+.game_vignette{
+  margin-bottom: 2rem;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: rgba(0,0,0,0.8) 0px 0 10px;
+  -moz-box-shadow: rgba(0,0,0,0.8) 0 0 10px;
+  box-shadow: rgba(0,0,0,0.8) 0 0 10px;
+}
+
 .game_vignette_title{
+  text-align: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  margin-bottom: -0.5rem;
+  padding: 1rem;
+  background-color: #8630cc;
+  color: white;
   font-weight: bolder;
   text-transform: uppercase;
 }
 .game_vignette_date{
+  text-align: right;
   margin-top: -0.5rem;
   background-color: #8630cc;
   color: white;
   font-weight: bolder;
-  padding: 0.5rem;
+  padding: 1rem;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }

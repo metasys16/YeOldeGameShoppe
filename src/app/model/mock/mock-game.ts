@@ -18,7 +18,7 @@ export const GAMES: Game[] = [
 		miniCover:'../../../assets/images/jackets/Mario-min.jpg',
 		pegi: 3,
 		copies: [
-			{ 
+			{
                 seller:{
                     id: 1,
                     firstName: 'ABRAHAM',
@@ -26,7 +26,7 @@ export const GAMES: Game[] = [
                     mail: 'nathan.abraham@exemple.com',
                     userName: '',
                     password: '',
-    			}, 
+    			},
                 price:120
             },
 			{
@@ -38,7 +38,7 @@ export const GAMES: Game[] = [
                     orders: [],
                     userName: '',
                     password: ''
-                }, 
+                },
                 price:110
             },
 			{
@@ -50,7 +50,7 @@ export const GAMES: Game[] = [
                     orders: [],
                     userName: '',
                     password: ''
-                }, 
+                },
                 price:130
             }
 		]
@@ -98,7 +98,7 @@ export const GAMES: Game[] = [
 		id: 5,
 		name: 'Pokemon Rouge',
 		creationDate: new Date(2017, 9, 12),
-		editors: [{name: 'Game Freak'}],
+		editors: [{name: 'GameFreak'}],
 		genres: [{name: 'aventure'}],
 		platforms: [{name: 'Game Boy'}],
 		cover: '../../../assets/images/jackets/PokemonRouge.jpg',
