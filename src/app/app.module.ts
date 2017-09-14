@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartService } from './service/cart.service';
 import { HttpModule } from '@angular/http';
 import { GameDetailService } from './service/game-detail.service';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { GameDetailService } from './service/game-detail.service';
     GameDetailComponent,
     GameListComponent,
     CartComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

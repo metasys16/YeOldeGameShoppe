@@ -8,7 +8,7 @@ export const GAMES: Game[] = [
 	{
 		id: 1,
 		name: 'Mario',
-		creationDate: new Date(2017, 9, 12),
+		creationDate: new Date(2017, 1, 12),
 		editors: [{name: 'Nintendo'}],
 		genres: [{name: 'plateforme'}],
 		platforms: [{name: 'NES'}, {name: 'GameBoy'}, {name: 'Nintendo64'}],
@@ -17,8 +17,15 @@ export const GAMES: Game[] = [
 		cover:'../../../assets/images/jackets/Mario.jpg',
 		miniCover:'../../../assets/images/jackets/Mario-min.jpg',
 		pegi: 3,
+		rates: [{
+		  mark: 3,
+			comment: 'faut revoir le gamePlay les dev ont du coder ca bourrés !!!'
+		},{
+		  mark: 2,
+			comment: 'faut revoir le gamePlay les dev ont du coder ca bourrés et saoul!!!'
+		}],
 		copies: [
-			{ 
+			{
                 seller:{
                     id: 1,
                     firstName: 'ABRAHAM',
@@ -26,7 +33,7 @@ export const GAMES: Game[] = [
                     mail: 'nathan.abraham@exemple.com',
                     userName: '',
                     password: '',
-    			}, 
+    			},
                 price:120
             },
 			{
@@ -38,7 +45,7 @@ export const GAMES: Game[] = [
                     orders: [],
                     userName: '',
                     password: ''
-                }, 
+                },
                 price:110
             },
 			{
@@ -50,7 +57,7 @@ export const GAMES: Game[] = [
                     orders: [],
                     userName: '',
                     password: ''
-                }, 
+                },
                 price:130
             }
 		]
@@ -66,12 +73,19 @@ export const GAMES: Game[] = [
 		releaseYear: '1984',
 		cover: '../../../assets/images/jackets/Tetris.jpg',
 		miniCover: '../../../assets/images/jackets/Tetris-min.png',
-		pegi: 3
+		pegi: 3,
+		rates: [{
+		  mark: 5,
+			comment: 'faut revoir le gamePlay les dev ont du coder ca bourrés !!!'
+		},{
+		  mark: 5,
+			comment: 'faut revoir le gamePlay les dev ont du coder ca bourrés et saoul!!!'
+		}],
 	},
 	{
 		id: 3,
 		name: 'Donkey Kong',
-		creationDate: new Date(2017, 9, 12),
+		creationDate: new Date(2017, 3, 12),
 		editors: [{name: 'Nintendo'}],
 		genres: [{name: 'aventure'}, {name: 'puzzle'}],
 		platforms: [{name: 'GameBoy'}],
@@ -84,7 +98,7 @@ export const GAMES: Game[] = [
 	{
 		id: 4,
 		name: 'Sonic',
-		creationDate: new Date(2017, 9, 12),
+		creationDate: new Date(2017, 4, 12),
 		editors: [{name: 'Sega'}],
 		genres: [{name: 'plateforme'}],
 		platforms: [{name: 'MegaDrive'}, {name: 'MasterSysteme'}, {name: 'GameBoy'}],
@@ -97,7 +111,7 @@ export const GAMES: Game[] = [
 	{
 		id: 5,
 		name: 'Pokemon Rouge',
-		creationDate: new Date(2017, 9, 12),
+		creationDate: new Date(2017, 5, 12),
 		editors: [{name: 'Game Freak'}],
 		genres: [{name: 'aventure'}],
 		platforms: [{name: 'Game Boy'}],
