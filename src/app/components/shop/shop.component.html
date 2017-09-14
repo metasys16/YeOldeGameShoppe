@@ -4,44 +4,178 @@
 			<ul class="list-group">
 				<li class="list-group-item">
 					<h4>Genre</h4>
-            <ul class="list-unstyled">
+            <ul class="list-unstyled filter-list" id="filterGenre">
               <li>
-      					<label class="form-check-label">
-      			      <input #aventure type="checkbox" class="form-check-input" name="aventure" (click)="filterGenre('aventure', aventure.checked)">
-      			       Aventure
-      			    </label>
+                <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                  <input #aventure type="checkbox" class="custom-control-input" name="aventure" (click)="filter('aventure', aventure.checked, 'Genre')">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Aventure</span>
+                </label>
               </li>
               <li>
-  					    <label class="form-check-label">
-  			          <input #puzzle type="checkbox" class="form-check-input" name="puzzle" (click)="filterGenre('puzzle', puzzle.checked)">
-  			           Puzzle
-  			        </label>
+                <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                  <input #puzzle type="checkbox" class="custom-control-input" name="puzzle" (click)="filter('puzzle', puzzle.checked, 'Genre')">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Puzzle</span>
+                </label>
               </li>
               <li>
-                <label class="form-check-label">
-      			       <input #plateforme type="checkbox" class="form-check-input" name="plateforme" (click)="filterGenre('plateforme', plateforme.checked)">
-      			       Plateforme
-      			    </label>
+                <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                  <input #plateforme type="checkbox" class="custom-control-input" name="plateforme" (click)="filter('plateforme', plateforme.checked, 'Genre')">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Plateforme</span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                  <input #beatThemAll type="checkbox" class="custom-control-input" name="beatThemAll" (click)="filter('beatThemAll', beatThemAll.checked, 'Genre')">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Beat Them All</span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                  <input #tir type="checkbox" class="custom-control-input" name="tir" (click)="filter('tir', tir.checked, 'Genre')">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Tir</span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                  <input #shootThemUp type="checkbox" class="custom-control-input" name="shootThemUp" (click)="filter('shootThemUp', shootThemUp.checked, 'Genre')">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Shoot Them Up</span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                  <input #action type="checkbox" class="custom-control-input" name="action" (click)="filter('action', action.checked, 'Genre')">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Action</span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                  <input #simulation type="checkbox" class="custom-control-input" name="simulation" (click)="filter('simulation', simulation.checked, 'Genre')">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Simulation</span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                  <input #rpg type="checkbox" class="custom-control-input" name="rpg" (click)="filter('rpg', rpg.checked, 'Genre')">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">RPG</span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                  <input #strategie type="checkbox" class="custom-control-input" name="strategie" (click)="filter('strategie', strategie.checked, 'Genre')">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Stratégie</span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                  <input #sport type="checkbox" class="custom-control-input" name="sport" (click)="filter('sport', sport.checked, 'Genre')">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Sport</span>
+                </label>
               </li>
           </ul>
 				</li>
 				<li class="list-group-item">
           <h4>Plateforme</h4>
-          <label class="form-check-label">
-             <input #GameBoy type="checkbox" class="form-check-input" name="GameBoy" (click)="filterPlatform('GameBoy', GameBoy.checked)">
-             GameBoy
-          </label>
-          <label class="form-check-label">
-             <input #MegaDrive type="checkbox" class="form-check-input" name="MegaDrive" (click)="filterPlatform('MegaDrive', MegaDrive.checked)">
-             MegaDrive
-          </label>
+          <ul class="list-unstyled filter-list" id="filterPlatform">
+            <li>
+              <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                <input #GameBoy type="checkbox" class="custom-control-input" name="GameBoy" (click)="filter('GameBoy', GameBoy.checked, 'Platform')">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">GameBoy</span>
+              </label>
+            </li>
+            <li>
+              <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                <input #MegaDrive type="checkbox" class="custom-control-input" name="MegaDrive" (click)="filter('MegaDrive', MegaDrive.checked, 'Platform')">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">MegaDrive</span>
+              </label>
+            </li>
+            <li>
+              <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                <input #MasterSystem type="checkbox" class="custom-control-input" name="MasterSystem" (click)="filter('MasterSystem', MasterSystem.checked, 'Platform')">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">MasterSystem</span>
+              </label>
+            </li>
+            <li>
+              <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                <input #Atari type="checkbox" class="custom-control-input" name="Atari" (click)="filter('Atari', Atari.checked, 'Platform')">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">Atari</span>
+              </label>
+            </li>
+            <li>
+              <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                <input #NES type="checkbox" class="custom-control-input" name="NES" (click)="filter('NES', NES.checked, 'Platform')">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">NES</span>
+              </label>
+            </li>
+            <li>
+              <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                <input #Saturn type="checkbox" class="custom-control-input" name="Saturn" (click)="filter('Saturn', Saturn.checked, 'Platform')">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">Saturn</span>
+              </label>
+            </li>
+            <li>
+              <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                <input #Playstation type="checkbox" class="custom-control-input" name="Playstation" (click)="filter('Playstation', Playstation.checked, 'Platform')">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">Playstation</span>
+              </label>
+            </li>
+            <li>
+              <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                <input #Nintendo64 type="checkbox" class="custom-control-input" name="Nintendo64" (click)="filter('Nintendo64', Nintendo64.checked, 'Platform')">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">Nintendo64</span>
+              </label>
+            </li>
+            <li>
+              <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                <input #Dreamcast type="checkbox" class="custom-control-input" name="Dreamcast" (click)="filter('Dreamcast', Dreamcast.checked, 'Platform')">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">Dreamcast</span>
+              </label>
+            </li>
+          </ul>
         </li>
 				<li class="list-group-item"><h4>Année de sortie</h4></li>
-				<li class="list-group-item"><h4>Editeur</h4></li>
+				<li class="list-group-item">
+          <h4>Editeur</h4>
+          <ul class="list-unstyled filter-list" id="filterEditor">
+            <li>
+              <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                <input #Sega type="checkbox" class="custom-control-input" name="Dreamcast" (click)="filter('Sega', Sega.checked, 'Editor')">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">Sega</span>
+              </label>
+            </li>
+            <li>
+              <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                <input #Nintendo type="checkbox" class="custom-control-input" name="Nintendo" (click)="filter('Nintendo', Nintendo.checked, 'Editor')">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">Nintendo</span>
+              </label>
+            </li>
+          </ul>
+        </li>
 				<li class="list-group-item"><h4>Note</h4></li>
 			</ul>
     </div>
-    <div class="col-9">
+    <div class="col-10">
 			<app-game-list [games]="games"></app-game-list>
     </div>
 </div>
