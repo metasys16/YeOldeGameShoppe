@@ -16,6 +16,7 @@ import { GameSearchService } from '../../service/game-search.service';
 @Component({
   selector: 'app-game-search',
   templateUrl: './game-search.component.html',
+  styleUrls: ['game-search.component.css'],
   providers: [GameSearchService]
 })
 export class GameSearchComponent implements OnInit {
