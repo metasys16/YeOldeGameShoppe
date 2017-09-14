@@ -44,6 +44,7 @@ export class GameService {
   getHighestRatedGames(): Game[] {
     let games = GAMES.slice();
     games = games.sort((a, b) => (this.averageRate(a)>this.averageRate(b))?-1:1);
+    //games = games.sort((a, b) => a.getRate() > b.getRate()?-1:1);
     return games.slice(0, 3);
   }
 
