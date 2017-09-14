@@ -1,0 +1,11 @@
+
+
+.gameResults{
+  overflow-y: scroll;
+  max-height: 200px;
+  background-color: white;
+  position: absolute;
+  z-index: 100;
+  top: 6rem;
+
+}
