@@ -1,6 +1,6 @@
 <div class="card container mx-auto">
   <h3 class="card-title title">Mon panier</h3>
-  <div class="d-flex flex-row justify-content-around align-items-center flex-nowrap">
+  <div *ngIf="cart" class="d-flex flex-row justify-content-around align-items-center flex-nowrap">
     <div class="card container border-0">
       <div class="card-block">
         <ul class="list-group">

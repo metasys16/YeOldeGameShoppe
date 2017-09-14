@@ -5,19 +5,20 @@
         <a class="nav-link" routerLink="/">Accueil<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="gameList">Magasin</a>
+        <a class="nav-link" routerLink="shop">Magasin</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="my-profile">Profil</a>
       </li>
     </ul>
     <div class="logo">
-      <img src="../../assets/images/YeOldeGameShoppe.png" />
+      <img src="../../assets/images/YeOldeGameShoppe.png"/>
     </div>
-    <app-game-search></app-game-search>
+    <form class="form-inline my-2 my-md-0">
+      <input class="form-control" type="text" placeholder="Rechercher">
+    </form>
     <a routerLink="cart"><img src="../../assets/images/icones/panier.png" id="panier"/></a>
   </div>
 </nav>
 <router-outlet>
-
 </router-outlet>
