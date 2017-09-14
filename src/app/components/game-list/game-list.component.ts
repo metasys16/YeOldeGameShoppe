@@ -8,6 +8,6 @@ import { Game } from '../../model/game';
 })
 
 export class GameListComponent {
-  @Input() games: Game;
+  @Input() games: Game[];
 
 }

@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div *ngFor="let game of games" class="col-12 col-sm-6 col-md-3" >
+    <div *ngFor="let game of games | async" class="col-12 col-sm-6 col-md-3">
       <a class="link" routerLink="/game/{{game.id}}" routerLinkActive="active">
         <div class="game_vignette">
           <h4 class="game_vignette_title">{{game.name}}</h4>
