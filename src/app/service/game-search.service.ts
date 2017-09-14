@@ -14,6 +14,6 @@ export class GameSearchService {
 
   search(term: string): Observable<Game[]> {
 
-    return Observable.of(GAMES.filter(x => x.name.toLowerCase() === term));
+    return Observable.of(GAMES.filter(x => x.name.toLowerCase().includes(term)));
   }
 }
