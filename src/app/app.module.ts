@@ -6,7 +6,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GameDetailComponent } from './components/game/game-detail.component';
-import { GameDetailService } from './service/game-detail.service';
 import { GameListComponent } from './components/game-list/game-list.component';
 import { AppComponent } from './app.component';
 import { CartComponent } from './components/cart/cart.component';
@@ -23,6 +22,8 @@ import { CartService } from './service/cart.service';
 import { DeliveryService } from './service/delivery.service';
 import { HttpModule } from '@angular/http';
 import { OrderComponent } from './components/order/order.component'
+import { GameDetailService } from './service/game-detail.service';
+import { HomeComponent } from './components/home/home.component';
 
 export const firebaseConfig = {
     apiKey: 'AIzaSyBEiqoujNEbGLpflGc0SvC9LwYkXsRvA4g',
@@ -44,7 +45,7 @@ export const firebaseConfig = {
     OrderComponent,
     GameSearchComponent,
     CartComponent,
-
+    HomeComponent
   ],
   imports: [
     BrowserModule,
