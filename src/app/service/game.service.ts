@@ -9,24 +9,25 @@ import { Observable } from 'rxjs/Observable';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import * as firebase from 'firebase/app';
 import 'rxjs/add/operator/toPromise';
+import 'rxjs/add/operator/first';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class GameService {
   
   games: Observable<Game[]>;
   
-  constructor(private dataBase: AngularFireDatabase) { }
+  constructor(private dataBase: AngularFireDatabase) {}
   
   getGame(id: number): Game {
     return GAMES.find(elem => elem.id == id);
   }
   
   getGames(criteria?: Criteria): Promise<Game[]> {
-    console.log("getting games");
-    this.games = this.dataBase.list('/games');
-    console.log("got game");
-    console.log(this.games);
-    return this.games.toPromise();
+    return this.dataBase.list('/games')
+      .map(games => this.games = games)
+      .first()
+      .toPromise();
   }
 
   getLatestGames(): Game[] {
