@@ -19,6 +19,7 @@ export const GAMES: Game[] = [
 		pegi: 3,
 		rates: [{
 		  mark: 3,
+		  
 			comment: 'faut revoir le gamePlay les dev ont du coder ca bourrés !!!'
 		},{
 		  mark: 2,
@@ -33,7 +34,8 @@ export const GAMES: Game[] = [
                     mail: 'nathan.abraham@exemple.com',
                     userName: '',
                     password: '',
-    			},
+                    avatar: '../../assets/images/profils/profile-unknow.jpg',
+    			}, 
                 price:120
             },
 			{
@@ -60,7 +62,34 @@ export const GAMES: Game[] = [
                 },
                 price:130
             }
-		]
+		],
+		commentary: [
+			{
+				editor:{
+					id: 1,
+                    firstName: 'ABRAHAM',
+                    lastName: 'Nathan',
+                    mail: 'nathan.abraham@exemple.com',
+                    userName: '',
+                    password: '',
+                    avatar: '../../../assets/images/profils/profile-unknow.jpg',
+				},
+				comment: "Ce jeu est super bien",
+				creationDate: new Date(2017, 2, 12),
+			},
+			{
+				editor:{
+					id: 3,
+                    firstName: 'PUSSAUT',
+                    lastName: 'Pierre',
+                    mail: 'pussaut.pierre@exemple.com',
+                    userName: '',
+                    password: ''
+				},
+				comment: "Licorne",
+				creationDate: new Date(2017, 11, 12),
+			}
+		]	
 	},
 	{
 		id: 2,

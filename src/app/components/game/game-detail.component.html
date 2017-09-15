@@ -11,32 +11,77 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-3">
-			<img class="img-fluid" src="{{game.cover}}" alt=""/>
-			<div class="game-note-contain">
-				<div class="game-note-color" [style.width]="width">
-					<img src="../../../assets/images/icones/game-note.png" alt=""/>
+		<div class="col-9">
+			<div class="row">
+				<div class="col-4">
+					<img class="img-fluid" src="{{game.cover}}" alt=""/>
+					<div class="game-note-contain">
+						<div class="game-note-color" [style.width]="width">
+							<img src="../../../assets/images/icones/game-note.png" alt=""/>
+						</div>
+					</div>
+				</div>
+				<div class="col-8">
+					<div class="jumbotron">
+						<div class="editorGame">
+							<h3 class="intitule">Editeur</h3>
+							<ul *ngFor="let editor of game.editors">
+								<li class="editor" >{{editor.name}}</li>
+							</ul>
+						</div>
+						<div class="platformGame">
+							<h3 class="intitule">Plateforme</h3>
+							<ul *ngFor="let platform of game.platforms">
+								<li class="platform" >{{platform.name}}</li>
+							</ul>
+						</div>
+						<div class="descriptionGame">
+							<p>{{game.description}}</p>
+						</div>
+					</div>
 				</div>
 			</div>
-
-		</div>
-
-		<div class="col-6">
-			<div class="jumbotron">
-				<div class="editorGame">
-					<h3 class="intitule">Editeur</h3>
-					<ul *ngFor="let editor of game.editors">
-						<li class="editor" >{{editor.name}}</li>
-					</ul>
-				</div>
-				<div class="platformGame">
-					<h3 class="intitule">Plateforme</h3>
-					<ul *ngFor="let platform of game.platforms">
-						<li class="platform" >{{platform.name}}</li>
-					</ul>
-				</div>
-				<div class="descriptionGame">
-					<p>{{game.description}}</p>
+			<div class="row">
+				<div class="col-12">
+					<div class="comment">
+						<div class="commentTitle">
+							<h3>Commentaires</h3>
+						</div>
+						<div class="commentView">
+							<ul *ngIf="hasCommentary;else nothing" class="commentList">
+								<li *ngFor="let comment of game.commentary" class="commentLineList">
+									<div class="commentUser">
+										<div class="commentUserAvatar">
+											<img src="{{comment.editor.avatar}}" alt ="" class="commentUserAvatar" />
+										</div>
+										<div>
+											<p class="commentNameUser">{{comment.editor.firstName}}</p>
+											<p class="commentNameUser">{{comment.editor.lastName}}</p>
+										</div>
+									</div>
+									<p class="commentary">{{comment.comment}}</p>
+								</li>
+							</ul>
+							<ng-template #nothing>
+								<div class="commentList">
+									<p class="noComment">Noob ou pro-Gamer? Donnez votre avis sur ce jeu.</p>
+								</div>
+							</ng-template>
+							<div class="createComment">
+								<div class="rate">
+									<ul class="listStars">
+										<li><a value= "1" href=""><img class="star" src="../../../assets/images/icones/Etoile.png"></a></li>
+										<li><a value= "2" href=""><img class="star" src="../../../assets/images/icones/Etoile.png"></a></li>
+										<li><a value= "3" href=""><img class="star" src="../../../assets/images/icones/Etoile.png"></a></li>
+										<li><a value= "4" href=""><img class="star" src="../../../assets/images/icones/Etoile.png"></a></li>
+										<li><a value= "5" href=""><img class="star" src="../../../assets/images/icones/Etoile.png"></a></li>
+									</ul>
+								</div>
+								<input type="text" name="addComment" class="writeComment">
+								<button class="validComment" (click)="addComment(commentary)">Valider</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -56,11 +101,9 @@
 				</li>
 			</ul>
 			<ng-template #warn>
+				<p class="noComment noCopy">Aucun exemplaire disponible</p>
 				<button type="button" class="btn btn-lg btn-warning">Me prévenir</button>
 			</ng-template>
 		</div>
-	</div>
-	<div class="row">
-
 	</div>
 </div>

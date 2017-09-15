@@ -15,9 +15,11 @@ export class GameDetailComponent implements OnInit {
 	public game:Game;
 	private id: number;
 	private hasCopies: boolean;
+	private hasCommentary: boolean;
 	private rate: number;
 	public width: string;
 	constructor(private gameDetailService: GameDetailService, private route: ActivatedRoute, public gameService: GameService) {}
+
 
 	ngOnInit() {
 		var elmt;
@@ -26,21 +28,22 @@ export class GameDetailComponent implements OnInit {
 		this.hasCopies = this.game.copies !== undefined
 					  && this.game.copies !== null
 					  && this.game.copies.length > 0;
-	 this.rate = this.gameService.averageRate(this.game);
+
+		this.hasCommentary = this.game.commentary !== undefined
+						  && this.game.commentary !== null
+						  && this.game.commentary.length > 0;
+		 this.rate = this.gameService.averageRate(this.game);
 	 let pourcentage = (this.rate *135)/5;
 	 pourcentage = Math.round(pourcentage);
 	 this.width = pourcentage+"px";
+	}
 
-
+	addComment() {
+		
 	}
 
 
-	/*addcart(): void {
-		while (Game.id !== []){
 
-		}
-		else{
 
-		}
-	}*/
 }
+

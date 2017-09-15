@@ -2,6 +2,9 @@
   font-family: Pirou;
   src: url('/assets/css/fonts/pirou.ttf');
 }
+.btn-info{
+  font-weight: bolder;
+}
 .breadcrumb{
   background-color: inherit;
 }
@@ -25,24 +28,28 @@
 	background-color: #6de2c4;
 	list-style-type: none;
 	padding: 3.5px;
-	margin-right: 5px;
+	margin-right: 0.25rem;
 	color: white;
 	display: flex;
 	flex-wrap: wrap;
 }
 .intitule{
-	width: 150px;
-	font-size: 20px;
+	width: 7.5rem;
+	font-size: 1rem;
 	font-weight: bold;
 }
 .intitule1{
-	width: 150px;
+	width: 7.5rem;
+}
+.description{
+	max-width: 600px;
+	font-size: 0.7rem;
 }
 .rate{
-	font-size: 24px;
+	font-size: 1.2rem;
 }
 .editor{
-	font-size: 20px;
+	font-size: 1rem;
 }
 ul{
 	list-style-type: none;
@@ -50,8 +57,8 @@ ul{
 	padding: 0;
 }
 .intituleAchat{
-	width: 100px;
-	font-size: 20px;
+	width: 5rem;
+	font-size: 1rem;
 }
 .infoAchat{
   border-radius: 5px;
@@ -59,18 +66,84 @@ ul{
 	flex-grow: 1;
   margin-bottom: 1rem;
 	padding: 1.5rem;
-  background-color: #8630cc;
+  background: linear-gradient(141deg, #961b8c 0%, #b81bc6 51%, #8630cc 75%);
   color: white;
 }
-.btn-info{
-  margin-top: 1rem;
-}
+
 .ligneInfoAchat{
 	display: flex;
 	justify-content: space-between;
 }
 .infoAchat:nth-child(even){
-    background-color: #eb4d5c;
+  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  color: white;
+  opacity: 0.95;
+}
+.comment{
+	display: flex;
+	flex-direction: column;
+}
+.commentTitle{
+	color:#00ba8b;
+	font-family: Pirou;
+	border-bottom-style: solid;
+	border-bottom-color: #00ba8b;
+}
+.commentView{
+	display: flex;
+	align-items: flex-start;
+}
+.commentList{
+	flex-grow: 2;
+}
+.commentLineList{
+	margin-top: 0.5rem;
+	margin-right: 0.5rem;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+}
+.commentUser{
+	width: 5.5rem;
+}
+.commentUserAvatar{
+	width: 5.5rem;
+	height: 5.5rem;
+	background-color: #cccccc;
+}
+.commentNameUser{
+	margin: 0rem;
+}
+.createComment{
+	margin-top: 0.5rem;
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	padding: 0.1rem;
+	justify-content: flex-end;
+}
+.writeComment{
+	height: 5rem;
+	margin: 0.25rem;
+}
+.noComment{
+	color:#00ba8b;
+	font-family: Pirou;
+	font-size: 1.25rem;
+	text-align-last: center;
+}
+.validComment{
+	background-color: #6de2c4;
+	padding: 0.25rem;
+	color: white;
+	max-width: 15rem;
+}
+.listStars{
+	display: flex;
+}
+.star{
+	height: 1rem;
+	width: 1rem;
 }
 .game-note-color{
   background: #6de2c4;
