@@ -27,7 +27,7 @@ export class GameDetailComponent implements OnInit {
 					  && this.game.copies !== null
 					  && this.game.copies.length > 0;
 	 this.rate = this.gameService.averageRate(this.game);
-	 let pourcentage = (this.rate *133)/5;
+	 let pourcentage = (this.rate *135)/5;
 	 pourcentage = Math.round(pourcentage);
 	 this.width = pourcentage+"px";
 
