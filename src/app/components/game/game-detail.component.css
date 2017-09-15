@@ -162,3 +162,10 @@ ul{
 	color: white;
 	max-width: 15rem;
 }
+.listStars{
+	display: flex;
+}
+.star{
+	height: 1rem;
+	width: 1rem;
+}

@@ -19,6 +19,7 @@ export const GAMES: Game[] = [
 		pegi: 3,
 		rates: [{
 		  mark: 3,
+		  
 			comment: 'faut revoir le gamePlay les dev ont du coder ca bourrés !!!'
 		},{
 		  mark: 2,

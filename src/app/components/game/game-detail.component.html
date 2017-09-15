@@ -75,7 +75,15 @@
 				</div>
 			</ng-template>
 			<div class="createComment">
-				<p class="rate">NOTE: </p>
+				<div class="rate">
+					<ul class="listStars">
+						<li><a value= "1" href=""><img class="star" src="../../../assets/images/icones/Etoile.png"></a></li>
+						<li><a value= "2" href=""><img class="star" src="../../../assets/images/icones/Etoile.png"></a></li>
+						<li><a value= "3" href=""><img class="star" src="../../../assets/images/icones/Etoile.png"></a></li>
+						<li><a value= "4" href=""><img class="star" src="../../../assets/images/icones/Etoile.png"></a></li>
+						<li><a value= "5" href=""><img class="star" src="../../../assets/images/icones/Etoile.png"></a></li>
+					</ul>
+				</div>
 				<input type="text" name="addComment" class="writeComment">
 				<button class="validComment" (click)="addComment(commentary)">Valider</button>
 			</div>
