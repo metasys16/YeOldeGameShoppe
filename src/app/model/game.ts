@@ -19,7 +19,7 @@ export class Game {
   pegi?: number;
   copies?: Copy[];
 
-  public getRate(): number {
+  public getRate?(): number {
     if (!this.rates || this.rates.length === 0) {
       return 0;
     }
