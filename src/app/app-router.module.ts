@@ -8,7 +8,9 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { GameListComponent } from './components/game-list/game-list.component';
 
 import { CartComponent } from './components/cart/cart.component';
+import { OrderComponent } from './components/order/order.component';
 import { LoginComponent } from './components/login/login.component';
+
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -23,6 +25,8 @@ const routes: Routes = [
   { path: 'shop', component: ShopComponent },
   { path: 'game/:id', component: GameDetailComponent },
   { path: 'gameList', component: GameListComponent},
+  { path: 'cart', component: CartComponent },
+  { path: 'order', component: OrderComponent },
   { path: 'cart', component: CartComponent },
 ];
 
