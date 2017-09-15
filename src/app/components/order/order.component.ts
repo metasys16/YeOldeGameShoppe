@@ -23,6 +23,8 @@ export class OrderComponent implements OnInit{
   private deliveries: Delivery[];
   private totalPrice: number;
   private selectedDelivery: Delivery;
+  private editBillingAddress: Boolean;
+  private editDeliveryAddress: Boolean;
 
   constructor(private cartService: CartService,
               private deliveryService: DeliveryService) { }
@@ -41,14 +43,18 @@ export class OrderComponent implements OnInit{
     this.deliveryService.getDeliveries().then( deliveries => this.deliveries = deliveries );
 
     if (this.user.billingAddress == undefined){
-      this.order.billingAddress = { addressNumber:"", street: "", complement:"Complément d'adresse", city: "Ville", postalCode: "Code Postal", country: "Pays"};
+      this.order.billingAddress = { addressNumber:"", street: "", complement:"", city: "", postalCode: "", country: ""};
+      this.editBillingAddress = true;
     }else{
       this.order.billingAddress = this.user.billingAddress;
+      this.editBillingAddress = false;
     }
     if (this.user.deliveryAddress == undefined){
-      this.order.deliveryAddress = { addressNumber:"", street: "", complement:"Complément d'adresse", city: "Ville", postalCode: "Code Postal", country: "Pays"};
+      this.order.deliveryAddress = { addressNumber:"", street: "", complement:"", city: "", postalCode: "", country: ""};
+      this.editDeliveryAddress = true;
     }else{
       this.order.deliveryAddress = this.user.deliveryAddress;
+      this.editDeliveryAddress = false;
     }
   }
 
@@ -58,5 +64,21 @@ export class OrderComponent implements OnInit{
 
   calculTotalAmount(): void {
     this.totalPrice = this.cart.copies.reduce( (a,b) => (a + b.price), 0 );
+  }
+
+  saveBillingAddress(): void{
+    this.editBillingAddress = false;
+  }
+
+  editBillingAddressClick(): void{
+    this.editBillingAddress = true;
+  }
+
+  saveDeliveryAddress(): void{
+    this.editBillingAddress = false;
+  }
+
+  editDeliveryAddressClick(): void{
+    this.editBillingAddress = true;
   }
 }

@@ -5,53 +5,75 @@
       <h4>Adresse de facturation</h4>
       <p>{{ user.lastName }} {{ user.firstName }}</p>
       Adresse :
-      <div class="input-group" style="margin-bottom: 10px;">
-        <span class="input-group-addon" id="num-address-addon">N°</span>
-        <input type="text" class="form-control" [(ngModel)]="order.billingAddress.addressNumber" [ngModelOptions]="{standalone: true}" placeholder="{{ order.billingAddress.addressNumber }}" aria-describedby="num-address-addon">
+      <div *ngIf="editBillingAddress">
+        <div class="input-group" style="margin-bottom: 10px;">
+          <span class="input-group-addon" id="num-address-addon">N°</span>
+          <input type="text" class="form-control" [(ngModel)]="order.billingAddress.addressNumber" [ngModelOptions]="{standalone: true}" aria-describedby="num-address-addon">
+        </div>
+        <div class="input-group" style="margin-bottom: 10px;">
+          <span class="input-group-addon" id="street-addon">Voie</span>
+          <input type="text" class="form-control" [(ngModel)]="order.billingAddress.street" [ngModelOptions]="{standalone: true}"  ria-describedby="street-addon">
+        </div>
+        <div class="input-group" style="margin-bottom: 10px;">
+          <input type="text" class="form-control" [(ngModel)]="order.billingAddress.complement" [ngModelOptions]="{standalone: true}" placeholder="Complément d'adresse">
+        </div>
+        <div class="input-group" style="margin-bottom: 10px;">
+          <input type="text" class="form-control" [(ngModel)]="order.billingAddress.city" [ngModelOptions]="{standalone: true}" placeholder="Ville">
+        </div>
+        <div class="input-group" style="margin-bottom: 10px;">
+          <input type="text" class="form-control" [(ngModel)]="order.billingAddress.postalCode" [ngModelOptions]="{standalone: true}" placeholder="Code Postal">
+        </div>
+        <div class="input-group" style="margin-bottom: 10px;">
+          <input type="text" class="form-control" [(ngModel)]="order.billingAddress.country" [ngModelOptions]="{standalone: true}" placeholder="Pays">
+        </div>
+        <button type="button" class="btn btn-outline-primary" (click)="saveBillingAddress();">Enregistrer</button>
       </div>
-      <div class="input-group" style="margin-bottom: 10px;">
-        <span class="input-group-addon" id="street-addon">Rue</span>
-        <input type="text" class="form-control" [(ngModel)]="order.billingAddress.street" [ngModelOptions]="{standalone: true}" placeholder="{{ order.billingAddress.street }}" ria-describedby="street-addon">
+      <div *ngIf="!editBillingAddress">
+        <p>
+          {{ order.billingAddress.addressNumber }} {{ order.billingAddress.street }} - {{ order.billingAddress.complement }},
+        </p>
+        <p>
+          {{ order.billingAddress.postalCode }} {{ order.billingAddress.city }}, {{ order.billingAddress.country }}.
+        </p>
+        <button type="button" class="btn btn-outline-primary" (click)="editBillingAddressClick();">Modifier</button>
       </div>
-      <div class="input-group" style="margin-bottom: 10px;">
-        <input type="text" class="form-control" [(ngModel)]="order.billingAddress.complement" [ngModelOptions]="{standalone: true}" placeholder="{{ order.billingAddress.complement }}">
-      </div>
-      <div class="input-group" style="margin-bottom: 10px;">
-        <input type="text" class="form-control" [(ngModel)]="order.billingAddress.city" [ngModelOptions]="{standalone: true}" placeholder="{{ order.billingAddress.city }}">
-      </div>
-      <div class="input-group" style="margin-bottom: 10px;">
-        <input type="text" class="form-control" [(ngModel)]="order.billingAddress.postalCode" [ngModelOptions]="{standalone: true}" placeholder="{{ order.billingAddress.postalCode }}">
-      </div>
-      <div class="input-group" style="margin-bottom: 10px;">
-        <input type="text" class="form-control" [(ngModel)]="order.billingAddress.country" [ngModelOptions]="{standalone: true}" placeholder="{{ order.billingAddress.country }}">
-      </div>
-      <button type="button" class="btn btn-outline-primary" disabled="true">Enregistrer</button>
     </article>
     <article class="col-4">
       <h4>Adresse de livraison</h4>
       <p>{{ user.lastName }} {{ user.firstName }}</p>
       Adresse :
-      <div class="input-group" style="margin-bottom: 10px;">
-        <span class="input-group-addon" id="num-address-addon">N°</span>
-        <input type="text" class="form-control" [(ngModel)]="order.deliveryAddress.addressNumber" [ngModelOptions]="{standalone: true}" placeholder="{{ order.deliveryAddress.addressNumber }}" aria-describedby="num-address-addon">
+      <div *ngIf="editDeliveryAddress">
+        <div class="input-group" style="margin-bottom: 10px;">
+          <span class="input-group-addon" id="num-address-addon">N°</span>
+          <input type="text" class="form-control" [(ngModel)]="order.deliveryAddress.addressNumber" [ngModelOptions]="{standalone: true}" aria-describedby="num-address-addon">
+        </div>
+        <div class="input-group" style="margin-bottom: 10px;">
+          <span class="input-group-addon" id="street-addon">Voie</span>
+          <input type="text" class="form-control" [(ngModel)]="order.deliveryAddress.street" [ngModelOptions]="{standalone: true}"  ria-describedby="street-addon">
+        </div>
+        <div class="input-group" style="margin-bottom: 10px;">
+          <input type="text" class="form-control" [(ngModel)]="order.deliveryAddress.complement" [ngModelOptions]="{standalone: true}" placeholder="Complément d'adresse">
+        </div>
+        <div class="input-group" style="margin-bottom: 10px;">
+          <input type="text" class="form-control" [(ngModel)]="order.deliveryAddress.city" [ngModelOptions]="{standalone: true}" placeholder="Ville">
+        </div>
+        <div class="input-group" style="margin-bottom: 10px;">
+          <input type="text" class="form-control" [(ngModel)]="order.deliveryAddress.postalCode" [ngModelOptions]="{standalone: true}" placeholder="Code Postal">
+        </div>
+        <div class="input-group" style="margin-bottom: 10px;">
+          <input type="text" class="form-control" [(ngModel)]="order.deliveryAddress.country" [ngModelOptions]="{standalone: true}" placeholder="Pays">
+        </div>
+        <button type="button" class="btn btn-outline-primary" (click)="saveDeliveryAddress();">Enregistrer</button>
       </div>
-      <div class="input-group" style="margin-bottom: 10px;">
-        <span class="input-group-addon" id="street-addon">Rue</span>
-        <input type="text" class="form-control" [(ngModel)]="order.deliveryAddress.street" [ngModelOptions]="{standalone: true}" placeholder="{{ order.deliveryAddress.street }}" ria-describedby="street-addon">
+      <div *ngIf="!editDeliveryAddress">
+        <p>
+          {{ order.deliveryAddress.addressNumber }} {{ order.deliveryAddress.street }} - {{ order.deliveryAddress.complement }},
+        </p>
+        <p>
+          {{ order.deliveryAddress.postalCode }} {{ order.deliveryAddress.city }}, {{ order.deliveryAddress.country }}.
+        </p>
+        <button type="button" class="btn btn-outline-primary" (click)="editDeliveryAddressClick();">Modifier</button>
       </div>
-      <div class="input-group" style="margin-bottom: 10px;">
-        <input type="text" class="form-control" [(ngModel)]="order.deliveryAddress.complement" [ngModelOptions]="{standalone: true}" placeholder="{{ order.deliveryAddress.complement }}">
-      </div>
-      <div class="input-group" style="margin-bottom: 10px;">
-        <input type="text" class="form-control" [(ngModel)]="order.deliveryAddress.city" [ngModelOptions]="{standalone: true}" placeholder="{{ order.deliveryAddress.city }}">
-      </div>
-      <div class="input-group" style="margin-bottom: 10px;">
-        <input type="text" class="form-control" [(ngModel)]="order.deliveryAddress.postalCode" [ngModelOptions]="{standalone: true}" placeholder="{{ order.deliveryAddress.postalCode }}">
-      </div>
-      <div class="input-group" style="margin-bottom: 10px;">
-        <input type="text" class="form-control" [(ngModel)]="order.deliveryAddress.country" [ngModelOptions]="{standalone: true}" placeholder="{{ order.deliveryAddress.country }}">
-      </div>
-      <button type="button" class="btn btn-outline-primary" disabled="true">Enregistrer</button>
     </article>
     <article *ngIf="deliveries" class="col-4">
       <h4>Service de livraison</h4>
@@ -73,20 +95,35 @@
     </article>
   </div>
 
-  <h3>Récapitulatif de votre commande</h3>
-  <ul *ngIf="cart" class="list-reset">
-    <li *ngFor="let copy of cart.copies">
-      <article>
-        <img *ngIf="copy.game.miniCover" src="{{copy.game.miniCover}}"
-          alt="jaquette de {{copy.game.name}}"/>
-        <p>Titre : {{copy.game.name}}</p>
-        <p>Prix : {{copy.price}}</p>
-      </article>
-    </li>
-  </ul>
+  <div class="container">
+    <h3>Récapitulatif de votre commande</h3>
+    <div *ngIf="cart" class="row justify-content-around">
+      <div class="col-6">
+        <ul class="list-unstyled">
+          <li *ngFor="let copy of cart.copies">
+            <div class="row">
+              <div class="col-4">
+                  <img *ngIf="copy.game.miniCover" src="{{copy.game.miniCover}}"
+                    alt="jaquette de {{copy.game.name}}"/>
+              </div>
+              <div class="col-4">
+                <p>Titre : {{copy.game.name}}</p>
+                <p>Plateforme : {{copy.game.platforms[0].name}}</p>
+                <p>Prix : {{copy.price}}</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-3">
 
-  <aside *ngIf="cart">
-    <p>TOTAL : {{ totalPrice }}</p>
-    <button type="button">Payer</button>
-  </aside>
+      </div>
+      <div class="col-3">
+        <aside>
+          <p>TOTAL : {{ totalPrice }}</p>
+          <button type="button" class="btn btn-outline-success">Commander</button>
+        </aside>
+      </div>
+    </div>
+  </div>
 </div>
