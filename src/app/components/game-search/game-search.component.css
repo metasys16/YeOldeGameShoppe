@@ -1,6 +1,7 @@
 
 
 .gameResults{
+  min-width: 200px;
   overflow-y: scroll;
   max-height: 200px;
   background-color: white;

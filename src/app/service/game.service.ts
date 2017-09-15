@@ -14,17 +14,17 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class GameService {
-  
+
   games: FirebaseListObservable<any>;
-  
+
   constructor(private dataBase: AngularFireDatabase) {
     this.games = this.dataBase.list('/games');
   }
-  
+
   getGame(id: number): Game {
     return GAMES.find(elem => elem.id == id);
   }
-  
+
   getGames(criteria?: Criteria): FirebaseListObservable<any> {
     return this.games;
   }
@@ -54,7 +54,7 @@ export class GameService {
     return games.slice(0, 3);
   }
 
-  private averageRate(game: Game): number {
+  public averageRate(game: Game): number {
     if (!game.rates || game.rates.length === 0) {
       return 0;
     }

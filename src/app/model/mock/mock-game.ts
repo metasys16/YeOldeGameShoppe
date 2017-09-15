@@ -107,7 +107,7 @@ export const GAMES: Game[] = [
 		  mark: 5,
 			comment: 'faut revoir le gamePlay les dev ont du coder ca bourrés !!!'
 		},{
-		  mark: 5,
+		  mark: 3,
 			comment: 'faut revoir le gamePlay les dev ont du coder ca bourrés et saoul!!!'
 		}],
 	},
