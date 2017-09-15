@@ -6,7 +6,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GameDetailComponent } from './components/game/game-detail.component';
-import { GameDetailService } from './service/game-detail.service';
 import { GameListComponent } from './components/game-list/game-list.component';
 import { AppComponent } from './app.component';
 import { CartComponent } from './components/cart/cart.component';
@@ -20,7 +19,10 @@ import { GameSearchService } from './service/game-search.service';
 import { GameService } from './service/game.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartService } from './service/cart.service';
+import { DeliveryService } from './service/delivery.service';
 import { HttpModule } from '@angular/http';
+import { OrderComponent } from './components/order/order.component'
+import { GameDetailService } from './service/game-detail.service';
 import { HomeComponent } from './components/home/home.component';
 
 export const firebaseConfig = {
@@ -40,7 +42,7 @@ export const firebaseConfig = {
     CartComponent,
     GameDetailComponent,
     GameListComponent,
-    /*MyProfileComponent,*/
+    OrderComponent,
     GameSearchComponent,
     CartComponent,
     HomeComponent
@@ -61,9 +63,9 @@ export const firebaseConfig = {
     UserService,
     GameDetailService,
     GameService,
+    CartService,
+    DeliveryService,
     GameSearchService,
-    CartService
-
   ],
   bootstrap: [AppComponent]
 })
