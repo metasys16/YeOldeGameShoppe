@@ -21,7 +21,7 @@ import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'user/:id', component: ProfileComponent },
+  { path: 'user/:username', component: ProfileComponent },
   { path: 'shop', component: ShopComponent },
   { path: 'game/:id', component: GameDetailComponent },
   { path: 'gameList', component: GameListComponent},

@@ -21,9 +21,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartService } from './service/cart.service';
 import { DeliveryService } from './service/delivery.service';
 import { HttpModule } from '@angular/http';
-import { OrderComponent } from './components/order/order.component'
+import { OrderComponent } from './components/order/order.component';
 import { GameDetailService } from './service/game-detail.service';
 import { HomeComponent } from './components/home/home.component';
+import { ArrayKeyPipe } from './pipe/array-key.pipe';
+import { OrderService } from './service/order.service';
 
 export const firebaseConfig = {
     apiKey: 'AIzaSyBEiqoujNEbGLpflGc0SvC9LwYkXsRvA4g',
@@ -45,7 +47,8 @@ export const firebaseConfig = {
     OrderComponent,
     GameSearchComponent,
     CartComponent,
-    HomeComponent
+    HomeComponent,
+    ArrayKeyPipe,
   ],
   imports: [
     BrowserModule,
@@ -66,6 +69,7 @@ export const firebaseConfig = {
     CartService,
     DeliveryService,
     GameSearchService,
+    OrderService,
   ],
   bootstrap: [AppComponent]
 })
