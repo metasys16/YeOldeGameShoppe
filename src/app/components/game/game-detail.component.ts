@@ -2,7 +2,7 @@ import { Game } from '../../model/game';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GameDetailService } from '../../service/game-detail.service';
-
+import { GameService } from '../../service/game.service';
 
 @Component({
 	selector: 'app-game-detail',
@@ -17,7 +17,7 @@ export class GameDetailComponent implements OnInit {
 	private hasCopies: boolean;
 	private rate: number;
 
-	constructor(private gameDetailService: GameDetailService, private route: ActivatedRoute) {}
+	constructor(private gameDetailService: GameDetailService, private route: ActivatedRoute, public gameService: GameService) {}
 
 	ngOnInit() {
 		this.id = this.route.snapshot.params['id'];
@@ -25,6 +25,7 @@ export class GameDetailComponent implements OnInit {
 		this.hasCopies = this.game.copies !== undefined
 					  && this.game.copies !== null
 					  && this.game.copies.length > 0;
+	 this.rate = this.gameService.averageRate(this.game);
 
 	}
 
