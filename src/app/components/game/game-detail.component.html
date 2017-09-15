@@ -44,7 +44,10 @@
 			</li>
 		</ul>
 		<ng-template #warn>
-			<button class="btnPrevenir" >Me prévenir</button>
+			<div class="infoAchat ligneInfoAchat">
+				<p class="noComment noCopy">Aucun exemplaire disponible</p>
+				<button class="btnPrevenir" >Me prévenir</button>
+			</div>
 		</ng-template>	
 	</div>
 	<div class="comment">
@@ -55,7 +58,9 @@
 			<ul *ngIf="hasCommentary;else nothing" class="commentList">
 				<li *ngFor="let comment of game.commentary" class="commentLineList">
 					<div class="commentUser">
-						<img src="{{comment.editor.avatar}}" alt ="" class="commentUserAvatar" />
+						<div class="commentUserAvatar">
+							<img src="{{comment.editor.avatar}}" alt ="" class="commentUserAvatar" />
+						</div>
 						<div>
 							<p class="commentNameUser">{{comment.editor.firstName}}</p>
 							<p class="commentNameUser">{{comment.editor.lastName}}</p>

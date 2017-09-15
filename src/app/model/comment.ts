@@ -5,4 +5,5 @@ export class Comment {
 	game?: Game;
 	editor: User;
 	comment: string;
+	creationDate: Date;
 }

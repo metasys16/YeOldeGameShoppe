@@ -73,7 +73,8 @@ export const GAMES: Game[] = [
                     password: '',
                     avatar: '../../../assets/images/profils/profile-unknow.jpg',
 				},
-				comment: "Ce jeu est super bien"
+				comment: "Ce jeu est super bien",
+				creationDate: new Date(2017, 2, 12),
 			},
 			{
 				editor:{
@@ -84,7 +85,8 @@ export const GAMES: Game[] = [
                     userName: '',
                     password: ''
 				},
-				comment: "Licorne"
+				comment: "Licorne",
+				creationDate: new Date(2017, 11, 12),
 			}
 		]	
 	},
