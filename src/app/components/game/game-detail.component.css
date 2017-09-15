@@ -37,14 +37,14 @@
 }
 .platformGame{
 	display: flex;
-	font-size: 
+	font-size:
 }
 .descriptionGame{
 	display: flex;
 	align-items: center;
 	align-items: flex-start;
 }
-.platform{	
+.platform{
 	background-color: #6de2c4;
 	list-style-type: none;
 	padding: 3.5px;
@@ -102,4 +102,15 @@ ul{
 .ligneInfoAchat{
 	display: flex;
 	justify-content: space-between;
+}
+
+.game-note-color{
+  background: #6de2c4;
+}
+.game-note-color img{
+  vertical-align: top;
+}
+.game-note-contain{
+  width: 133px;
+  height: 27px;
 }

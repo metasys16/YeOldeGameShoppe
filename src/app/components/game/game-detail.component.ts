@@ -12,22 +12,28 @@ import { GameService } from '../../service/game.service';
 
 export class GameDetailComponent implements OnInit {
 
-	private game:Game;
+	public game:Game;
 	private id: number;
 	private hasCopies: boolean;
 	private rate: number;
-
+	public width: string;
 	constructor(private gameDetailService: GameDetailService, private route: ActivatedRoute, public gameService: GameService) {}
 
 	ngOnInit() {
+		var elmt;
 		this.id = this.route.snapshot.params['id'];
 		this.game = this.gameDetailService.getGame(this.id);
 		this.hasCopies = this.game.copies !== undefined
 					  && this.game.copies !== null
 					  && this.game.copies.length > 0;
 	 this.rate = this.gameService.averageRate(this.game);
+	 let pourcentage = (this.rate *133)/5;
+	 pourcentage = Math.round(pourcentage);
+	 this.width = pourcentage+"px";
+
 
 	}
+
 
 	/*addcart(): void {
 		while (Game.id !== []){
