@@ -2,49 +2,26 @@
   font-family: Pirou;
   src: url('/assets/css/fonts/pirou.ttf');
 }
-
-.detail{
-	width: 80%;
-  	margin: 0 auto;
-}
-.detailGame{
-	display: flex;
-	flex-wrap: wrap;
-	align-content: flex-start;
-	align-items: flex-start;
-}
-.pictureRateGame{
-	flex-grow: 1;
-	justify-content: center;
-}
-.infoGame{
-	display: flex;
-	flex-direction: column;
-	flex-grow: 3;
+.breadcrumb{
+  background-color: inherit;
 }
 .titleGame{
-	display: flex;
 	color: #00ba8b;
-	font-size: 30px;
-	font-weight: bold;
-}
-.chemin{
-	color: #00ba8b;
-	font-size: 20px;
+	font-weight: bolder;
+  font-size: 3rem;
 }
 .editorGame{
+  margin: 1rem;
 	display: flex;
 }
 .platformGame{
+  margin: 1rem;
 	display: flex;
-	font-size: 
 }
 .descriptionGame{
-	display: flex;
-	align-items: center;
-	align-items: flex-start;
+  margin: 1rem;
 }
-.platform{	
+.platform{
 	background-color: #6de2c4;
 	list-style-type: none;
 	padding: 3.5px;
@@ -61,10 +38,7 @@
 .intitule1{
 	width: 150px;
 }
-.description{
-	max-width: 600px;
-	font-size: 14px;
-}
+
 .rate{
 	font-size: 24px;
 }
