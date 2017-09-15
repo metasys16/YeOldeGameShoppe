@@ -17,7 +17,6 @@
 .platformGame{
   margin: 1rem;
 	display: flex;
-
 }
 .descriptionGame{
   margin: 1rem;
@@ -39,7 +38,6 @@
 .intitule1{
 	width: 150px;
 }
-
 .rate{
 	font-size: 24px;
 }
@@ -55,28 +53,24 @@ ul{
 	width: 100px;
 	font-size: 20px;
 }
-.btnPanier{
-	background-color: #6de2c4;
-	padding: 3.5px;
-	color: white;
-}
-.btnPrevenir{
-	background-color: #6de2c4;
-	padding: 5px;
-	color: white;
-}
 .infoAchat{
-	display: flex;
+  border-radius: 5px;
 	flex-direction: column;
 	flex-grow: 1;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #6de2c4;
-	padding: 5px;
+  margin-bottom: 1rem;
+	padding: 1.5rem;
+  background-color: #8630cc;
+  color: white;
+}
+.btn-info{
+  margin-top: 1rem;
 }
 .ligneInfoAchat{
 	display: flex;
 	justify-content: space-between;
+}
+.infoAchat:nth-child(even){
+    background-color: #eb4d5c;
 }
 .game-note-color{
   background: #6de2c4;
