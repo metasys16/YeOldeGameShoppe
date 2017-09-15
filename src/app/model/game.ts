@@ -18,4 +18,14 @@ export class Game {
   releaseYear: String;
   pegi?: number;
   copies?: Copy[];
+
+  public getRate?(): number {
+    if (!this.rates || this.rates.length === 0) {
+      return 0;
+    }
+    return this.rates.reduce((a, b) => (a + b.mark), 0)/this.rates.length;
+  }
+
+
+
 }
