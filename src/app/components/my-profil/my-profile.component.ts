@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../model/user';
 import { AuthService } from '../../service/auth.service';
-import { UserService } from '../../service/user.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
+import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'app-my-profile',

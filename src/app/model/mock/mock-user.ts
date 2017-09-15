@@ -5,7 +5,7 @@ export const USERS: User[] = [
     id: 1,
     firstName: 'ABRAHAM',
     lastName: 'Nathan',
-    mail: 'nathan.abraham@exemple.com',
+    mail: 'nathan.abraham@outlook.com',
     orders: [
       {
         reference: '02-2017-HJ45',

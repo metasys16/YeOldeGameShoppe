@@ -13,11 +13,11 @@ export class UserService {
   
   constructor(private dataBase: AngularFireDatabase) {}
   
-  getUser(id: number): Promise<User> {
+  /*getUser(id: number): Promise<User> {
     this.user = this.dataBase.object('/user/${id}');
     return this.user.toPromise();
-  }
-  getUserByLogin(model: any): Promise<User> {
-    return Promise.resolve(USERS.find(elem => elem.userName === model.username && elem.password === model.password));
+  }*/
+  getUserByLogin(mail: string): Promise<User> {
+    return Promise.resolve(USERS.find(elem => elem.mail === mail));
   }
 }
