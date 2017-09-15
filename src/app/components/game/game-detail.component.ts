@@ -15,6 +15,7 @@ export class GameDetailComponent implements OnInit {
 	private game:Game;
 	private id: number;
 	private hasCopies: boolean;
+	private hasCommentary: boolean;
 
 	constructor(private gameDetailService: GameDetailService, private route: ActivatedRoute) {}
 
@@ -24,14 +25,10 @@ export class GameDetailComponent implements OnInit {
 		this.hasCopies = this.game.copies !== undefined 
 					  && this.game.copies !== null
 					  && this.game.copies.length > 0;
+		this.hasCommentary = this.game.commentary !== undefined
+						  && this.game.commentary !== null
+						  && this.game.commentary.length > 0;
 	}
 
-	/*addcart(): void {
-		while (Game.id !== []){
-
-		}
-		else{
-
-		}
-	}*/
+	
 }

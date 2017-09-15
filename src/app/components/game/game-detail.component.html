@@ -54,4 +54,33 @@
 			</ng-template>
 		</div>
 	</div>
+
+
+	<div class="comment">
+		<div class="commentTitle">
+			<h3>Commentaires</h3>
+		</div>
+		<div class="commentView">
+			<div class="existCommentary">
+				<ul *ngIf="hasCommentary;else nothing" class="commentList">
+					<li *ngFor="let comment of game.commentary" class="commentLineList">
+						<div class="commentUser">
+							<img src="{{comment.editor.avatar}}" alt ="" class="commentUserAvatar" />
+							<div>
+								<p class="commentNameUser">{{comment.editor.firstName}}</p>
+								<p class="commentNameUser">{{comment.editor.lastName}}</p>
+							</div>
+						</div>
+						<p class="commentary">{{comment.comment}}</p>
+					</li>
+				</ul>
+			</div>
+			<ng-template #nothing></ng-template>
+			<div class="createComment">
+				<p class="rate">NOTE: </p>
+				<input type="text" name="addComment">
+				<button class="validComment" >Valider</button>
+			</div>
+
+
 </div>
