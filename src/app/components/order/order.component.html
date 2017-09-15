@@ -5,36 +5,46 @@
       <h4>Adresse de facturation</h4>
       <p>{{ user.lastName }} {{ user.firstName }}</p>
       Adresse :
-      <div *ngIf="editBillingAddress">
+      <form action="" *ngIf="editBillingAddress">
         <div class="input-group" style="margin-bottom: 10px;">
           <span class="input-group-addon" id="num-address-addon">N°</span>
-          <input type="text" class="form-control" [(ngModel)]="order.billingAddress.addressNumber" [ngModelOptions]="{standalone: true}" aria-describedby="num-address-addon">
+          <input type="text" class="form-control" [(ngModel)]="tempBillingAddress.addressNumber"
+            [ngModelOptions]="{standalone: true}" aria-describedby="num-address-addon">
         </div>
         <div class="input-group" style="margin-bottom: 10px;">
           <span class="input-group-addon" id="street-addon">Voie</span>
-          <input type="text" class="form-control" [(ngModel)]="order.billingAddress.street" [ngModelOptions]="{standalone: true}"  ria-describedby="street-addon">
+          <input type="text" class="form-control" [(ngModel)]="tempBillingAddress.street"
+            [ngModelOptions]="{standalone: true}"  ria-describedby="street-addon">
         </div>
         <div class="input-group" style="margin-bottom: 10px;">
-          <input type="text" class="form-control" [(ngModel)]="order.billingAddress.complement" [ngModelOptions]="{standalone: true}" placeholder="Complément d'adresse">
+          <input type="text" class="form-control" [(ngModel)]="tempBillingAddress.complement"
+            [ngModelOptions]="{standalone: true}" placeholder="Complément d'adresse">
         </div>
         <div class="input-group" style="margin-bottom: 10px;">
-          <input type="text" class="form-control" [(ngModel)]="order.billingAddress.city" [ngModelOptions]="{standalone: true}" placeholder="Ville">
+          <input type="text" class="form-control" [(ngModel)]="tempBillingAddress.city"
+            [ngModelOptions]="{standalone: true}" placeholder="Ville">
         </div>
         <div class="input-group" style="margin-bottom: 10px;">
-          <input type="text" class="form-control" [(ngModel)]="order.billingAddress.postalCode" [ngModelOptions]="{standalone: true}" placeholder="Code Postal">
+          <input type="text" class="form-control" [(ngModel)]="tempBillingAddress.postalCode"
+            [ngModelOptions]="{standalone: true}" placeholder="Code Postal">
         </div>
         <div class="input-group" style="margin-bottom: 10px;">
-          <input type="text" class="form-control" [(ngModel)]="order.billingAddress.country" [ngModelOptions]="{standalone: true}" placeholder="Pays">
+          <input type="text" class="form-control" [(ngModel)]="tempBillingAddress.country"
+            [ngModelOptions]="{standalone: true}" placeholder="Pays">
         </div>
-        <button type="button" class="btn btn-outline-primary" (click)="saveBillingAddress();">Enregistrer</button>
-      </div>
+        <button type="submit" class="btn btn-outline-primary" (click)="saveBillingAddress();">Enregistrer</button>
+        <button type="button" class="btn btn-outline-danger" (click)="cancelEditBillingAddress();">Annuler</button>
+      </form>
       <div *ngIf="!editBillingAddress">
-        <p>
-          {{ order.billingAddress.addressNumber }} {{ order.billingAddress.street }} - {{ order.billingAddress.complement }},
-        </p>
-        <p>
-          {{ order.billingAddress.postalCode }} {{ order.billingAddress.city }}, {{ order.billingAddress.country }}.
-        </p>
+        <div *ngIf="order.billingAddress.street != ''  && order.billingAddress.postalCode != ''  && order.billingAddress.city != ''  && order.billingAddress.country != ''">
+          <p>
+            {{ order.billingAddress.addressNumber }} {{ order.billingAddress.street }}
+            <span *ngIf="order.billingAddress.complement != ''"> - {{ order.billingAddress.complement }}</span>
+          </p>
+          <p>
+            {{ order.billingAddress.postalCode }} {{ order.billingAddress.city }}, {{ order.billingAddress.country }}.
+          </p>
+        </div>
         <button type="button" class="btn btn-outline-primary" (click)="editBillingAddressClick();">Modifier</button>
       </div>
     </article>
@@ -45,33 +55,43 @@
       <div *ngIf="editDeliveryAddress">
         <div class="input-group" style="margin-bottom: 10px;">
           <span class="input-group-addon" id="num-address-addon">N°</span>
-          <input type="text" class="form-control" [(ngModel)]="order.deliveryAddress.addressNumber" [ngModelOptions]="{standalone: true}" aria-describedby="num-address-addon">
+          <input type="text" class="form-control" [(ngModel)]="tempDeliveryAddress.addressNumber"
+            [ngModelOptions]="{standalone: true}" aria-describedby="num-address-addon">
         </div>
         <div class="input-group" style="margin-bottom: 10px;">
           <span class="input-group-addon" id="street-addon">Voie</span>
-          <input type="text" class="form-control" [(ngModel)]="order.deliveryAddress.street" [ngModelOptions]="{standalone: true}"  ria-describedby="street-addon">
+          <input type="text" class="form-control" [(ngModel)]="tempDeliveryAddress.street"
+            [ngModelOptions]="{standalone: true}"  ria-describedby="street-addon">
         </div>
         <div class="input-group" style="margin-bottom: 10px;">
-          <input type="text" class="form-control" [(ngModel)]="order.deliveryAddress.complement" [ngModelOptions]="{standalone: true}" placeholder="Complément d'adresse">
+          <input type="text" class="form-control" [(ngModel)]="tempDeliveryAddress.complement"
+            [ngModelOptions]="{standalone: true}" placeholder="Complément d'adresse">
         </div>
         <div class="input-group" style="margin-bottom: 10px;">
-          <input type="text" class="form-control" [(ngModel)]="order.deliveryAddress.city" [ngModelOptions]="{standalone: true}" placeholder="Ville">
+          <input type="text" class="form-control" [(ngModel)]="tempDeliveryAddress.city"
+            [ngModelOptions]="{standalone: true}" placeholder="Ville">
         </div>
         <div class="input-group" style="margin-bottom: 10px;">
-          <input type="text" class="form-control" [(ngModel)]="order.deliveryAddress.postalCode" [ngModelOptions]="{standalone: true}" placeholder="Code Postal">
+          <input type="text" class="form-control" [(ngModel)]="tempDeliveryAddress.postalCode"
+            [ngModelOptions]="{standalone: true}" placeholder="Code Postal">
         </div>
         <div class="input-group" style="margin-bottom: 10px;">
-          <input type="text" class="form-control" [(ngModel)]="order.deliveryAddress.country" [ngModelOptions]="{standalone: true}" placeholder="Pays">
+          <input type="text" class="form-control" [(ngModel)]="tempDeliveryAddress.country"
+            [ngModelOptions]="{standalone: true}" placeholder="Pays">
         </div>
         <button type="button" class="btn btn-outline-primary" (click)="saveDeliveryAddress();">Enregistrer</button>
+        <button type="button" class="btn btn-outline-danger" (click)="cancelEditDeliveryAddress();">Annuler</button>
       </div>
       <div *ngIf="!editDeliveryAddress">
-        <p>
-          {{ order.deliveryAddress.addressNumber }} {{ order.deliveryAddress.street }} - {{ order.deliveryAddress.complement }},
-        </p>
-        <p>
-          {{ order.deliveryAddress.postalCode }} {{ order.deliveryAddress.city }}, {{ order.deliveryAddress.country }}.
-        </p>
+        <div *ngIf="order.deliveryAddress.street != ''  && order.deliveryAddress.postalCode != ''  && order.deliveryAddress.city != ''  && order.deliveryAddress.country != ''">
+          <p>
+            {{ order.deliveryAddress.addressNumber }} {{ order.deliveryAddress.street }}
+            <span *ngIf="order.deliveryAddress.complement != ''"> - {{ order.deliveryAddress.complement }}</span>
+          </p>
+          <p>
+            {{ order.deliveryAddress.postalCode }} {{ order.deliveryAddress.city }}, {{ order.deliveryAddress.country }}.
+          </p>
+        </div>
         <button type="button" class="btn btn-outline-primary" (click)="editDeliveryAddressClick();">Modifier</button>
       </div>
     </article>
